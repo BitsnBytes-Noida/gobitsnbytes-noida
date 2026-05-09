@@ -13,12 +13,13 @@ export const metadata: Metadata = {
     "bits and bytes support",
   ],
   alternates: {
-    canonical: "https://gobitsnbytes.org/qna",
+    canonical: "https://noida.gobitsnbytes.org/qna",
   },
   openGraph: {
     title: "QnA Assistant | Bits&Bytes AI Bot",
-    description: "Chat with the official Bits&Bytes AI assistant. Ask anything about our club, events, and tech community.",
-    url: "https://gobitsnbytes.org/qna",
+    description:
+      "Chat with the official Bits&Bytes AI assistant. Ask anything about our club, events, and tech community.",
+    url: "https://noida.gobitsnbytes.org/qna",
     type: "website",
     images: [
       {
@@ -32,7 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "QnA Assistant | Bits&Bytes AI",
-    description: "Chat with the official Bits&Bytes AI assistant powered by advanced language models.",
+    description:
+      "Chat with the official Bits&Bytes AI assistant powered by advanced language models.",
     images: ["/og-image.png"],
     creator: "@bitsnbytes_lko",
   },
@@ -47,22 +49,18 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://gobitsnbytes.org",
+      item: "https://noida.gobitsnbytes.org",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "QnA Assistant",
-      item: "https://gobitsnbytes.org/qna",
+      item: "https://noida.gobitsnbytes.org/qna",
     },
   ],
 };
 
-export default function QnALayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function QnALayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <script

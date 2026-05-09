@@ -13,12 +13,13 @@ export const metadata: Metadata = {
     "teen programmers india join",
   ],
   alternates: {
-    canonical: "https://gobitsnbytes.org/join",
+    canonical: "https://noida.gobitsnbytes.org/join",
   },
   openGraph: {
     title: "Join Bits&Bytes - Free Membership | India's Teen Code Club",
-    description: "Join for FREE! Connect with 1500+ teen developers, build projects, attend hackathons. Ages 13-19 welcome.",
-    url: "https://gobitsnbytes.org/join",
+    description:
+      "Join for FREE! Connect with 1500+ teen developers, build projects, attend hackathons. Ages 13-19 welcome.",
+    url: "https://noida.gobitsnbytes.org/join",
     type: "website",
   },
 };
