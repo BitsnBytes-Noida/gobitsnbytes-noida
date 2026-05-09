@@ -92,13 +92,15 @@ export default function Impact() {
                 </span>
                 Impact
               </span>
-              <h1 id="impact-hero-title" className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight font-extrabold text-white tracking-tighter drop-shadow-2xl">
-                Our impact hits <br className="hidden sm:block" /> beyond the venue walls
+              <h1
+                id="impact-hero-title"
+                className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight font-extrabold text-white tracking-tighter drop-shadow-2xl"
+              >
+                What the network <br className="hidden sm:block" /> has built
               </h1>
               <p className="max-w-2xl text-base sm:text-lg md:text-xl text-white/85 font-medium leading-relaxed">
-                From first-high-schooler hackathons to squads embedded inside
-                local schools, we design experiences that get teens
-                building—and ship the outcomes publicly.
+                Hackathons, workshops, and labs run by forks across the network.
+                Teens build, and the outcomes ship publicly.
               </p>
             </div>
           </div>
@@ -107,12 +109,15 @@ export default function Impact() {
 
       <main className="bg-transparent">
         <PageSection
-          title="Building the future with teen-led squads"
-          description="Workshops, hackathons, and labs unlock hands-on practice, industry mentorship, and opportunities to deploy solutions in schools and communities."
+          title="The network by the numbers"
+          description="Numbers from across the Bits&Bytes network. Noida contributes as it grows."
         >
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
             <div className="order-2 w-full justify-self-center lg:order-1">
-              <GlassContainer className="h-[300px] sm:h-[400px] lg:h-[500px]" animated={false}>
+              <GlassContainer
+                className="h-[300px] sm:h-[400px] lg:h-[500px]"
+                animated={false}
+              >
                 <Suspense fallback={<LoadingInline />}>
                   <TeamGlobe />
                 </Suspense>
@@ -151,7 +156,7 @@ export default function Impact() {
 
         <PageSection
           align="center"
-          eyebrow="Event highlight"
+          eyebrow="Network event"
           title="Scrapyard Lucknow 2024"
           description={
             <span className="mx-auto block max-w-2xl">
@@ -246,7 +251,9 @@ export default function Impact() {
                   <GlowingCard animationDelay={idx * 0.12}>
                     <div className="space-y-3">
                       <GlowingCardNumber index={idx + 1} />
-                      <GlowingCardTitle className="mt-3">{pillar.title}</GlowingCardTitle>
+                      <GlowingCardTitle className="mt-3">
+                        {pillar.title}
+                      </GlowingCardTitle>
                       <GlowingCardDescription>
                         {pillar.copy}
                       </GlowingCardDescription>

@@ -13,12 +13,13 @@ export const metadata: Metadata = {
     "student hackathon questions",
   ],
   alternates: {
-    canonical: "https://gobitsnbytes.org/faq",
+    canonical: "https://noida.gobitsnbytes.org/faq",
   },
   openGraph: {
     title: "FAQ - Frequently Asked Questions | Bits&Bytes",
-    description: "Get answers about joining Bits&Bytes, our hackathons, and what to expect from India's teen code club.",
-    url: "https://gobitsnbytes.org/faq",
+    description:
+      "Get answers about joining Bits&Bytes, our hackathons, and what to expect from India's teen code club.",
+    url: "https://noida.gobitsnbytes.org/faq",
     type: "website",
   },
 };
@@ -79,11 +80,7 @@ const faqJsonLd = {
   ],
 };
 
-export default function FAQLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function FAQLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <script

@@ -1,27 +1,22 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Bits&Bytes Noida | Founding Team",
+  title: "About Bits&Bytes Noida | Team",
   description:
-    "Learn about Bits&Bytes Noida — a student-led builder community focused on real-world projects. Meet the founding team and the vision behind the Noida chapter.",
-  verification: {
-    google:"kxsOlXIibWjV2NCJwp_BSTjfu5VoArR2Vh_00bpLoZA" 
-  },
-    keywords: [
+    "Bits&Bytes Noida is a city fork of Bits&Bytes. Meet the team behind the Noida fork.",
+  keywords: [
     "Bits&Bytes Noida",
-    "student coding club noida",
     "teen developers noida",
-    "school coding community india",
+    "student coding community noida",
     "builder community noida",
   ],
   alternates: {
-    canonical: "https://gobitsnbytes-noida.vercel.app/about",
+    canonical: "https://noida.gobitsnbytes.org/about",
   },
   openGraph: {
     title: "About Bits&Bytes Noida",
-    description:
-      "Meet the founding team and vision behind Bits&Bytes Noida.",
-    url: "https://bitsnbytes-noida.vercel.app/about",
+    description: "Meet the team behind the Noida fork of Bits&Bytes.",
+    url: "https://noida.gobitsnbytes.org/about",
     type: "website",
   },
 };

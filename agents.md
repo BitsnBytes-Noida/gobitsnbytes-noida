@@ -1,148 +1,132 @@
+# Bits&Bytes Noida: agents handbook
 
-# Bits&Bytes Team – Agents Handbook
-
-> **Mission:** Empowering ambitious teenagers to ship meaningful tech through premium hackathons, design/dev squads, and real-world product launches.  
-> **Org Type:** Nonprofit · Independent Teen‑Led Code Club · Based in Lucknow, India · Serving builders nationwide
-
-This handbook describes the core Bits&Bytes “agents” (team members), what each person is great at, and how we collaborate to ship high‑impact, production-grade projects fast.
+> Getting teens in Noida to build and ship publicly.
+> City fork of Bits&Bytes. Teen-led. Noida, India.
 
 ---
 
-## 1. Brand & Identity
+## Brand and identity
 
-### 1.1 Mission & Vision
-We move away from "beginner-friendly" formats that treat participants like they need constant hand-holding. We build space for exceptionally talented, high-agency individuals who want to ship real products, not just prototypes.
+### Mission
 
-### 1.2 The Origin Story
-Originally hosting Daydream Lucknow under Hack Club, we faced a last-minute venue withdrawal with everything already set. Instead of quitting, we went fully independent and realized that independence allows us to bypass the rigid formats of global orgs and deliver actual sponsor ROI and participant value.
+We make space for teen builders in Noida. Same floor as the network: teen-led, ships publicly, builder culture. Everything else, we figure out for this city.
 
-### 1.3 Brand Kit
-Bits&Bytes uses a compact, production-friendly visual identity designed for high-impact student-led communications. Key elements:
+innovate. collaborate. hack.
 
-- **Brand Mark:** A 3D cube monogram (the cube contains a stylized 'BB' and a small star accent). Use the full wordmark for large headings and the cube mark for constrained spaces (avatars, favicons). Prefer a white reversed mark on dark backgrounds; use single-color marks on light backgrounds. Always maintain clear space around the mark.
+### Fork identity
 
-- **Typography:**
-  - Primary: Helvetica Now — headings and display (use heavier weights for emphasis).
-  - Secondary: Georgia Pro — body copy and long-form reading.
-  - Accent (script): Palm Club — decorative hero treatments only.
-  - Accent (display): Anton — condensed display accents used sparingly.
+This is a fork, not a chapter. Not a branch office. Same codebase, different build.
 
-- **Color System:**
-  - **Burgundy (Core gradient):** Base: #97192C → #791423 → #5B0F1A → #3C0A12 → #1E0509
-  - **Neutrals:** #120F0A, #413F3B, #716F6C, #A09F9D, #D0CFCE
-  - **Accent / Orange (pop gradient):** #FC920D → #FDA83D → #FDBE6E → #FED39E → #FEE9CF
-  - **Warm Accent Range:** #C94218, #D46846, #DF8E74, #E9B3A3, #F4D9D1
-  - **Utility / Interaction:** Vibrant Pink #E45A92, Rich Plum #5D2F77, Deep Purple #3E1E68
+- Use: fork, city fork, local build, Bits&Bytes Noida
+- Never use: franchise, chapter, club, branch, affiliate
 
-  Design guidance: treat burgundy/plum as the core voice (serious and composed); use the orange gradient for emphasis and pops; prefer layered gradients for depth; and use the neutral scale to keep layouts clean.
+Handle convention: `gobitsnbytes-noida` (GitHub), `@gobitsnbytes.noida` (Instagram)
 
-- **Visual Elements:**
-  - Use gradients (Vibrant Pink → Rich Plum → Deep Purple) for hero backgrounds.
+### Brand kit
+
+Bits&Bytes uses a compact, production-friendly visual identity. Key elements:
+
+- Brand mark: A 3D cube monogram (the cube contains a stylized "BB" and a small star accent). Use the full wordmark for large headings and the cube mark for constrained spaces (avatars, favicons). Prefer a white reversed mark on dark backgrounds; use single-color marks on light backgrounds. Always maintain clear space around the mark.
+
+- Typography:
+  - Primary: Helvetica Now, headings and display (use heavier weights for emphasis).
+  - Secondary: Georgia Pro, body copy and long-form reading.
+  - Accent (script): Palm Club, decorative hero treatments only.
+  - Accent (display): Anton, condensed display accents used sparingly.
+
+- Color system:
+  - Burgundy (core gradient): Base: #97192C to #791423 to #5B0F1A to #3C0A12 to #1E0509
+  - Neutrals: #120F0A, #413F3B, #716F6C, #A09F9D, #D0CFCE
+  - Accent / Orange (pop gradient): #FC920D to #FDA83D to #FDBE6E to #FED39E to #FEE9CF
+  - Warm accent range: #C94218, #D46846, #DF8E74, #E9B3A3, #F4D9D1
+  - Utility / interaction: Vibrant Pink #E45A92, Rich Plum #5D2F77, Deep Purple #3E1E68
+  - Design guidance: treat burgundy/plum as the core voice (serious and composed); use the orange gradient for emphasis and pops; prefer layered gradients for depth; and use the neutral scale to keep layouts clean.
+
+- Visual elements:
+  - Use gradients (Vibrant Pink to Rich Plum to Deep Purple) for hero backgrounds.
   - Halftone/stipple textures, geometric checks, and a small star/sparkle motif are approved decorative elements. Apply as subtle overlays to add texture without reducing legibility.
 
-- **Logo usage & assets:** keep vector SVGs for web/print, provide monochrome variants, and do not distort, rotate, or apply unapproved color treatments.
-
-Refer to the project's brand board and `public/llms.txt` Brand Kit section for the canonical palette, typography guidance, and visual examples.
+- Logo usage and assets: keep vector SVGs for web/print, provide monochrome variants, and do not distort, rotate, or apply unapproved color treatments.
 
 ---
 
-## 2. Agent Directory (Who Does What?)
+## Network founders
 
-Quick reference for “who to ping for what”.
+These are the founders of Bits&Bytes. This section is reproduced from the parent org and is not ours to change.
 
-| Name | Role | Superpowers |
-|-----------|---------------------------|---------------------------------------------------------|
-| **Yash Singh** | Co-Founder & Organisation Lead | STEM Prodigy, AI Prototyping, Competitive Math, Debate |
-| **Aadrika Maurya** | Co-Founder & Chief Creative Strategist | Neuroscience Research (EEG), Brand Strategy, Regional Management |
-| **Akshat Kushwaha** | Co-Founder & Technical Lead | Production-Grade Engineering, AI/LLMOps |
-| **Devaansh Pathak** | Founding Member & Backend Lead | Backend Architecture, Partnership Economics, Database Systems |
-| **Maryam Fatima** | Social Media & Promotions Head | Impact Storytelling, Visual Design, Campaign Strategy |
-| **Sristhi Singh** | Operations & Communications Head | Process Optimization, Logistics, Internal Comms |
+### Yash Singh, Co-Founder and Organisation Lead
 
----
-
-## 3. Agent Profiles
-
-### 3.1 Leadership
-
-#### Yash Singh – Co-Founder & Organisation Lead
-- **Expertise:** Mathematics (IOQM), AI Prototyping, Full-Stack Dev, Hardware Experiments
-- **Achievements:** 
-  - Created **Codiva**, a 5-star rated VS Code extension with thousands of users.
-  - National Qualifier for the **Indian Mathematics Olympiad (IOQM)**.
-  - Lead Organizer for Scrapyard Lucknow and Mentor at NASA Space Apps Challenge (helping 400+ participants).
-  - Educator at **STEMist Lucknow**, teaching CS to underprivileged students.
-- **Profiles:**
+- Expertise: Mathematics (IOQM), AI Prototyping, Full-Stack Dev, Hardware Experiments
+- Achievements:
+  - Created Codiva, a 5-star rated VS Code extension with thousands of users.
+  - National Qualifier for the Indian Mathematics Olympiad (IOQM).
+  - Built AI projects including laser pushup detection systems and PDF scrapers.
+  - Lead Organizer for Scrapyard Lucknow and GDS MUN. Mentor at NASA Space Apps Challenge (helping 400+ participants).
+  - Educator at STEMist Lucknow, teaching CS to underprivileged students.
+- Profiles:
   - Website: https://yashvibe.codes/
   - GitHub: https://github.com/yashclouded
+- Owns: Organizational strategy, event timelines, and outreach. The operator instincts and community connections that make events actually execute.
 
-- **Owns:** Organizational strategy, event timelines, and high-impact outreach.
+### Aadrika Maurya, Co-Founder and Chief Creative Strategist
 
-
-#### Aadrika Maurya – Co-Founder & Chief Creative Strategist
-- **Expertise:** Neuroscience (EEG/Attention modeling), Creative Strategy, Regional Management
-- **Achievements:** 
-  - RSI India Alumni.
-  - Regional Manager for CodeDay Kanpur.
-  - Building 'The Nerdy Network'.
-- **Profiles:**
+- Expertise: Neuroscience (EEG/Attention modeling), Creative Strategy, Brand Direction
+- Achievements:
+  - RSI India Alumni who conducted neuroscience research on EEG signals and attention modeling, the kind of work most people don't touch until grad school.
+- Profiles:
   - LinkedIn: https://www.linkedin.com/in/aadrika-maurya/
   - Website: https://aadrikasportfolio.framer.website/
   - GitHub: https://github.com/Aadrika08
-- **Owns:** Visual identity, campaign planning, and cross-city scaling.
+- Owns: Creative direction, brand strategy, and the vision for what the network becomes.
 
-#### Akshat Kushwaha – Co-Founder & Technical Lead
-- **Expertise:** AI-Native Engineering, Retrieval Systems, System Reliability, LLMOps
-- **Achievements:** 
-  - **AI-native systems engineer** who asks what happens when software fails—building production workflows and retrieval architectures that survive real constraints.
-  - **Lead at STEMist Prayagraj**: Defining high-performance engineering culture for young builders across the city.
-  - **Lead Architect**: Built the entire Bits&Bytes production-grade tech infrastructure from scratch.
-- **Profiles:**
-  - LinkedIn: https://www.linkedin.com/in/akshat-singh-kushwaha 
+### Akshat Kushwaha, Co-Founder and Technical Lead
+
+- Expertise: AI-Native Engineering, Retrieval Systems, System Reliability, LLMOps
+- Achievements:
+  - Ex Jr. Research Engineer at jhana.ai at 17, where he built production AI systems including a Steno dictation plugin and AI-era IVRS.
+  - Builds production workflows and retrieval architectures that survive real constraints.
+  - Built the entire Bits&Bytes tech infrastructure from scratch.
+- Profiles:
+  - LinkedIn: https://www.linkedin.com/in/akshat-singh-kushwaha
   - Website: https://a3ro.dev
   - GitHub: https://github.com/a3ro-dev
-- **Owns:** System architecture, technical stability, and shifting the club towards production-ready software.
+- Owns: The entire tech stack, the infra, and anything that needs to actually work under pressure.
 
 ---
 
-## 4. Track Record
+## Noida core
 
-- **Scrapyard Lucknow:** 80 registrations, 50 participants, 10k+ impressions. Executed in 13 days.
-- **NASA Space Apps Challenge Lucknow:** 300+ participants.
-- **CodeDay Hackathons:** Across Lucknow, Delhi, and Dehradun.
-- **Web Presence:** gobitsnbytes.org serves thousands of monthly visitors with 1000+ active members.
+The team running this fork.
 
----
-
-## 5. How We Work
-
-### 5.1 Core Principles
-1. **High Agency ONLY** – We don't do hand-holding. We build for thinkers and builders.
-2. **Ship Real Products** – Workshops and hack nights must convert into tangible outcomes.
-3. **Collaboration First** – We default to pairing and sharing context.
-4. **Resilience** – We don't make excuses; we ship regardless of obstacles (e.g., the venue incident).
-
-### 5.2 Technical Guidelines
-1. **Performance First** – Optimized for speed (TTFB, LCP, INP).
-2. **Always Optimized** – Production-grade code is mandatory; no "just for fun" hacks on core infra.
-3. **Use PNPM** – Always use `pnpm` for speed and consistency.
-
-## 6. AI Assistant & RAG Maintenance
-
-- The repository includes an on-page AI assistant that answers from two sources:
-  - live page context (client `pathname` and optional page snippets sent by the client), and
-  - a semantic RAG index stored in Supabase (`site_embeddings`) and queried via `lib/rag.ts`.
-- Embeddings are generated with `openai/text-embedding-3-small` through the Hack Club proxy (`HACKCLUB_PROXY_API_KEY`) by `scripts/embed-site.ts`.
-- The embed script currently indexes `public/llms.txt` and `agents.md` (keeping these files current keeps the RAG index up to date).
-- To refresh the RAG index after content changes run:
-
-```bash
-pnpm tsx scripts/embed-site.ts
-```
-
-- A Husky `pre-push` hook runs the embedding step automatically when tracked source paths change; see `.husky/pre-push` for `EMBED_PATHS`.
-- To add more content to the index, update `scripts/embed-site.ts` `filePaths` and the `.husky/pre-push` `EMBED_PATHS` variable.
+| Name | Role |
+|------|------|
+| Aryan Chauhan | Lead + Tech |
+| Nisha Rawat | Operations Head |
+| Disha Yadav | Creative and Design Head |
+| Benny Vijay Daniel | Sponsorship Head |
 
 ---
 
-*Last updated: April 25, 2026*
+## How we work
+
+### The floor (non-negotiable)
+
+- Code of Conduct: reproduced exactly as written. No edits, no local amendments.
+- Founders section: names, roles, and descriptions exactly as given.
+- Terminology: use "fork", never "chapter" or "franchise".
+- Teen-led, ships publicly: the two non-negotiable operating conditions.
+
+### The ceiling (ours to define)
+
+- Event format: whatever fits Noida
+- Visual identity: our own aesthetic
+- Local partnerships: schools, colleges, companies in the city
+- Voice and copy: write like we're from Noida, not like a startup from San Francisco
+
+---
+
+## Contact
+
+- Email: [noida@gobitsnbytes.org](mailto:noida@gobitsnbytes.org)
+- Instagram: [@gobitsnbytes.noida](https://www.instagram.com/gobitsnbytes.noida/)
+- GitHub: [gobitsnbytes-noida](https://github.com/gobitsnbytes-noida)

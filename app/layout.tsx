@@ -4,7 +4,8 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Bits&Bytes Noida",
-  description: "City fork of Bits&Bytes",
+  description:
+    "Bits&Bytes Noida. A city fork. Teens who build and ship publicly. innovate. collaborate. hack.",
 };
 
 function Navbar() {
@@ -15,15 +16,27 @@ function Navbar() {
   ];
 
   const socialNavLinks = [
-    { href: "https://github.com/gobitsnbytes-noida", label: "GITHUB", external: true },
-    { href: "https://www.instagram.com/gobitsnbytes.noida", label: "INSTAGRAM", external: true },
+    {
+      href: "https://github.com/gobitsnbytes-noida",
+      label: "GITHUB",
+      external: true,
+    },
+    {
+      href: "https://www.instagram.com/gobitsnbytes.noida",
+      label: "INSTAGRAM",
+      external: true,
+    },
   ];
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-[#4a3c67] bg-[#140d24]">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4">
         <Link href="/" className="flex min-w-0 items-center gap-2 sm:gap-3">
-          <img src="/logo.svg" alt="Bits&Bytes Noida logo" className="h-7 w-7 rounded-full object-cover" />
+          <img
+            src="/logo.svg"
+            alt="Bits&Bytes Noida logo"
+            className="h-7 w-7 rounded-full object-cover"
+          />
           <span className="truncate text-xs font-semibold tracking-tight text-[#f4efff] sm:text-sm md:text-base">
             BITS&amp;BYTES NOIDA
           </span>
@@ -31,7 +44,11 @@ function Navbar() {
 
         <div className="hidden items-center gap-3 text-[11px] font-medium uppercase tracking-tight text-[#b5a9cf] sm:flex sm:gap-5 md:gap-7 md:text-xs">
           {primaryNavLinks.map((item) => (
-            <Link key={item.label} href={item.href} className="transition hover:text-[#e0c3ff]">
+            <Link
+              key={item.label}
+              href={item.href}
+              className="transition hover:text-[#e0c3ff]"
+            >
               {item.label}
             </Link>
           ))}
@@ -54,7 +71,11 @@ function Navbar() {
           </summary>
           <div className="absolute right-0 mt-3 min-w-40 space-y-2 bg-[#140d24] p-3 text-right text-xs font-medium uppercase tracking-tight text-[#b5a9cf]">
             {primaryNavLinks.map((item) => (
-              <Link key={item.label} href={item.href} className="block transition hover:text-[#e0c3ff]">
+              <Link
+                key={item.label}
+                href={item.href}
+                className="block transition hover:text-[#e0c3ff]"
+              >
                 {item.label}
               </Link>
             ))}

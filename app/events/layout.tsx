@@ -14,12 +14,13 @@ export const metadata: Metadata = {
     "student hackathons",
   ],
   alternates: {
-    canonical: "https://gobitsnbytes.org/events",
+    canonical: "https://noida.gobitsnbytes.org/events",
   },
   openGraph: {
     title: "Events | Bits&Bytes",
-    description: "Bits&Bytes pipelines real projects. From teen-led hackathons to our production deployments at India Innovates 2026.",
-    url: "https://gobitsnbytes.org/events",
+    description:
+      "Bits&Bytes pipelines real projects. From teen-led hackathons to our production deployments at India Innovates 2026.",
+    url: "https://noida.gobitsnbytes.org/events",
     type: "website",
   },
 };
@@ -29,7 +30,8 @@ const eventsJsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   name: "Bits&Bytes Events",
-  description: "Hackathons, workshops, and tech events for teen developers in India",
+  description:
+    "Hackathons, workshops, and tech events for teen developers in India",
   itemListElement: [
     {
       "@type": "ListItem",
@@ -66,7 +68,8 @@ const eventsJsonLd = {
       item: {
         "@type": "Event",
         name: "Scrapyard Lucknow 2025",
-        description: "Our debut hackathon united 40+ coders, designers, filmmakers, and builders.",
+        description:
+          "Our debut hackathon united 40+ coders, designers, filmmakers, and builders.",
         startDate: "2025-12-01",
         eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
         eventStatus: "https://schema.org/EventPostponed",
