@@ -10,7 +10,7 @@ export default function About() {
     {
       name: "Benny Vijay Daniel",
       role: "Sponsorship Head",
-      image: "",
+      image: "/team/benny.png",
     },
   ];
 
