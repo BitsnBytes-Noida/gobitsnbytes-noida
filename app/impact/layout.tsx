@@ -12,12 +12,13 @@ export const metadata: Metadata = {
     "coding club achievements",
   ],
   alternates: {
-    canonical: "https://gobitsnbytes.org/impact",
+    canonical: "https://noida.gobitsnbytes.org/impact",
   },
   openGraph: {
     title: "Our Impact - 1500+ Students Building the Future | Bits&Bytes",
-    description: "1500+ active members, 130+ shipped projects, 100+ schools. See how Bits&Bytes is empowering teen developers.",
-    url: "https://gobitsnbytes.org/impact",
+    description:
+      "1500+ active members, 130+ shipped projects, 100+ schools. See how Bits&Bytes is empowering teen developers.",
+    url: "https://noida.gobitsnbytes.org/impact",
     type: "website",
   },
 };
