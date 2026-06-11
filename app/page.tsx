@@ -105,7 +105,7 @@ export default function Home() {
   <span className="particle particle-4 hidden md:block"></span>
 <span className="particle particle-5 hidden md:block"></span>
 </div>
-      <div className="animated-grid absolute inset-0 z-0" />
+      
       
 
       <div className="hero-glow absolute left-1/2 top-32 -z-10 h-[280px] w-[280px] -translate-x-1/2 rounded-full bg-purple-700/20 blur-[120px] md:top-40 md:h-[500px] md:w-[500px] md:blur-[150px]" />

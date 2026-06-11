@@ -1,6 +1,8 @@
+import "../styles/globals.css";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Spotlight from "@/components/Spotlight";
+import GridBackground from "@/components/GridBackground";
 export const metadata: Metadata = {
   title: "Bits&Bytes Noida",
   description:
@@ -105,6 +107,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-h-screen bg-[#120a1f] font-sans text-[#f4efff] antialiased">
         <Navbar />
+        <GridBackground />
         <Spotlight />
         <main>{children}</main>
       </body>
