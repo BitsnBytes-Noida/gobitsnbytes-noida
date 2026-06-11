@@ -135,7 +135,7 @@ export default function Home() {
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
             <a
               href="/join"
-              className="group w-full sm:w-auto justify-center inline-flex items-center gap-2 rounded-lg border border-purple-500/40 bg-purple-500/10 px-6 py-3 text-sm font-medium uppercase tracking-wide text-white transition-all duration-300 hover:scale-105 hover:border-purple-400 hover:shadow-[0_0_30px_rgba(168,85,247,0.35)]"
+              className="group inline-flex w-full sm:w-auto justify-center items-center gap-2 rounded-lg border border-purple-500/40 bg-purple-500/10 px-6 py-3 text-sm font-medium uppercase tracking-wide text-white transition-all duration-200 hover:scale-105 hover:border-purple-400 hover:shadow-[0_0_30px_rgba(168,85,247,0.35)] active:scale-95 active:bg-purple-500/20 active:border-purple-300"
             >
               JOIN NOIDA
               <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -145,7 +145,7 @@ export default function Home() {
 
             <a
               href="/about"
-              className="rounded-lg border w-full sm:w-auto justify-center border-zinc-700 px-6 py-3 text-sm font-medium uppercase tracking-wide text-zinc-300 transition hover:border-purple-500 hover:text-white"
+              className="w-full sm:w-auto rounded-lg border border-zinc-700 px-6 py-3 text-sm font-medium uppercase tracking-wide text-zinc-300 transition-all duration-200 hover:border-purple-500 hover:text-white active:scale-95 active:border-purple-400 active:text-white"
             >
               LEARN MORE
             </a>
