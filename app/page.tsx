@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <main className="relative px-6 py-20 md:py-24">
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(rgba(229,229,229,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(229,229,229,0.06)_1px,transparent_1px)] bg-[size:44px_44px]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(rgba(229,229,229,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(229,229,229,0.06)_1px,transparent_1px)] bg-size-[44px_44px]" />
 
       <div className="mx-auto max-w-6xl">
         <p className="text-xs uppercase tracking-tight text-gray-400">BITS&amp;BYTES NOIDA</p>
