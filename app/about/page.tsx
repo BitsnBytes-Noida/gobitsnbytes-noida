@@ -2,7 +2,7 @@ export default function About() {
   const noidaCore = [
     {
       name: "Aryan Chauhan",
-      role: "Lead + Tech",
+      role: "Lead",
       image: "/team/aryan.png",
       bio: "Building the technical backbone of Bits&Bytes Noida.",
     },
@@ -24,6 +24,12 @@ export default function About() {
       image: "/team/benny.png",
       bio: "Building partnerships and sponsorships.",
     },
+    {
+      name: "Tanish Garg",
+      role: "Tech Lead",
+      image: "/team/tanish.png",
+      bio: "Leading the development of our digital platforms.",
+    }
   ];
 
   const founders = [
@@ -42,6 +48,7 @@ export default function About() {
       role: "Co-Founder & Technical Lead",
       image: "/team/akshat.jpg",
     },
+
   ];
 
   return (
