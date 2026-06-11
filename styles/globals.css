@@ -433,3 +433,86 @@
   }
 }
 
+.animated-grid {
+  background-image:
+    linear-gradient(rgba(168, 85, 247, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168, 85, 247, 0.12) 1px, transparent 1px);
+
+  background-size: 40px 40px;
+  animation: gridMove 12s linear infinite;
+}
+@keyframes gridMove {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 40px 40px;
+  }
+}
+
+.hero-glow {
+  animation: pulseGlow 8s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+
+  50% {
+    transform: translateX(-50%) scale(1.15);
+  }
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 9999px;
+  background: #a855f7;
+  box-shadow: 0 0 15px #a855f7;
+  animation: floatParticle 8s ease-in-out infinite;
+}
+
+.particle-1 {
+  top: 20%;
+  left: 15%;
+}
+
+.particle-2 {
+  top: 40%;
+  left: 80%;
+  animation-delay: 1s;
+}
+
+.particle-3 {
+  top: 70%;
+  left: 25%;
+  animation-delay: 2s;
+}
+
+.particle-4 {
+  top: 30%;
+  left: 60%;
+  animation-delay: 3s;
+}
+
+.particle-5 {
+  top: 80%;
+  left: 75%;
+  animation-delay: 4s;
+}
+
+@keyframes floatParticle {
+  0%,100% {
+    transform: translateY(0px);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: translateY(-30px);
+    opacity: 1;
+  }
+}
