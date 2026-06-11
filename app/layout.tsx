@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Link from "next/link";
-
+import Spotlight from "@/components/Spotlight";
 export const metadata: Metadata = {
   title: "Bits&Bytes Noida",
   description:
@@ -106,6 +106,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-h-screen bg-[#120a1f] font-sans text-[#f4efff] antialiased">
         <Navbar />
+        <Spotlight />
         <main>{children}</main>
       </body>
     </html>

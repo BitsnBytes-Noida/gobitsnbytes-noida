@@ -516,3 +516,10 @@
     opacity: 1;
   }
 }
+#spotlight {
+  background: radial-gradient(
+    500px circle at var(--x) var(--y),
+    rgba(168, 85, 247, 0.12),
+    transparent 40%
+  );
+}

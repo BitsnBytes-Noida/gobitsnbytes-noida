@@ -83,6 +83,19 @@ export default function Home() {
     };
   }, [currentSet]);
 
+  useEffect(() => {
+  const handleMouseMove = (e: MouseEvent) => {
+    document.documentElement.style.setProperty("--x", `${e.clientX}px`);
+    document.documentElement.style.setProperty("--y", `${e.clientY}px`);
+  };
+
+  window.addEventListener("mousemove", handleMouseMove);
+
+  return () => {
+    window.removeEventListener("mousemove", handleMouseMove);
+  };
+}, []);
+
   return (
     <main className="relative overflow-hidden px-6 py-20 md:py-32">
       <div className="particles absolute inset-0 pointer-events-none">
@@ -93,6 +106,7 @@ export default function Home() {
   <span className="particle particle-5"></span>
 </div>
       <div className="animated-grid absolute inset-0 z-0" />
+      
 
       <div className="hero-glow absolute left-1/2 top-40 -z-10 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-purple-700/20 blur-[150px]" />
 
