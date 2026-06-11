@@ -1,16 +1,28 @@
 export default function About() {
   const noidaCore = [
-    { name: "Aryan Chauhan", role: "Lead + Tech", image: "/team/aryan.png" },
-    { name: "Nisha Rawat", role: "Operations Head", image: "/team/nisha.png" },
+    {
+      name: "Aryan Chauhan",
+      role: "Lead + Tech",
+      image: "/team/aryan.png",
+      bio: "Building the technical backbone of Bits&Bytes Noida.",
+    },
+    {
+      name: "Nisha Rawat",
+      role: "Operations Head",
+      image: "/team/nisha.png",
+      bio: "Ensuring events and operations run smoothly.",
+    },
     {
       name: "Disha Yadav",
       role: "Creative & Design Head",
       image: "/team/disha.png",
+      bio: "Crafting the visual identity of the community.",
     },
     {
       name: "Benny Vijay Daniel",
       role: "Sponsorship Head",
       image: "/team/benny.png",
+      bio: "Building partnerships and sponsorships.",
     },
   ];
 
@@ -33,10 +45,12 @@ export default function About() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#050505] px-6 py-16 text-[#e5e5e5] md:py-20">
+    <main className="min-h-screen bg-gradient-to-b from-[#06000f] via-[#0d0518] to-[#040007] px-6 py-16 text-[#e5e5e5] md:py-20">
       <div className="mx-auto max-w-6xl">
-        <h1 className="text-5xl font-semibold uppercase tracking-tight md:text-7xl md:leading-[0.95]">
-          ABOUT
+        <h1 className="text-5xl font-bold uppercase tracking-tight text-white md:text-7xl md:leading-[0.95]">
+          <span className="bg-linear-to-r from-purple-400 via-fuchsia-300 to-purple-500 bg-clip-text text-transparent">
+            ABOUT
+          </span>
         </h1>
 
         <section className="mt-10 max-w-2xl">
@@ -56,33 +70,40 @@ export default function About() {
           </p>
         </section>
 
-        <section className="mt-14">
+        <section className="relative mt-14">
           <h2 className="text-xs font-medium uppercase tracking-[0.18em] text-[#9a9a9a]">
             NOIDA CORE
           </h2>
-          <div className="mt-6 grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4">
+          <div className="absolute left-1/2 top-0 h-64 w-64 -translate-x-1/2 rounded-full bg-purple-700/20 blur-3xl" />
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {noidaCore.map((member) => (
-              <div key={member.name} className="space-y-3">
-                {member.image ? (
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="aspect-square w-full object-cover"
-                  />
-                ) : (
-                  <div className="flex aspect-square w-full items-center justify-center bg-[#1a1a1a] text-2xl font-medium text-[#9a9a9a]">
-                    {member.name
-                      .split(" ")
-                      .map((n) => n[0])
-                      .join("")}
-                  </div>
-                )}
-                <p className="text-base font-medium tracking-tight">
-                  {member.name}
-                </p>
-                <p className="text-xs uppercase tracking-wide text-[#9a9a9a]">
-                  {member.role}
-                </p>
+              <div
+                key={member.name}
+                className="group relative overflow-hidden rounded-2xl border border-purple-500/20 bg-[#0c0815]"
+              >
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="aspect-square w-full object-cover transition-all duration-500 group-hover:scale-110"
+                />
+
+                {/* Purple Glow */}
+                <div className="absolute inset-0 bg-purple-600/0 transition-all duration-500 group-hover:bg-purple-600/10" />
+
+                {/* Overlay */}
+                <div className="absolute inset-0 flex translate-y-full flex-col justify-end bg-gradient-to-t from-[#12001f] via-[#12001fdc] to-transparent p-5 transition-transform duration-500 group-hover:translate-y-0">
+                  <h3 className="text-lg font-semibold text-white">
+                    {member.name}
+                  </h3>
+
+                  <p className="mt-1 text-xs uppercase tracking-wider text-purple-300">
+                    {member.role}
+                  </p>
+
+                  <div className="mt-3 h-px w-full bg-purple-500/30" />
+
+                  <p className="mt-3 text-sm text-zinc-300">{member.bio}</p>
+                </div>
               </div>
             ))}
           </div>
