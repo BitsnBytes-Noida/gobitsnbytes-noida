@@ -3,44 +3,210 @@
 import PageWrapper from "@/components/PageWrapper";
 
 const FORM_URL = "https://forms.gle/SSAbJfczyuJLswPL8";
+const DISCORD_URL = "https://discord.gg/u9Dkntjdy";
 
 export default function Join() {
   return (
     <PageWrapper>
+      <main className="relative z-10 min-h-screen bg-linear-to-b from-[#06000f]/70 via-[#0d0518]/70 to-[#040007]/70 px-6 py-20 md:py-24">
+        <div className="mx-auto max-w-6xl">
+          {/* HERO */}
+          <section className="text-center">
+            <p className="text-sm uppercase tracking-[0.3em] text-purple-300">
+              BITS&BYTES NOIDA
+            </p>
 
-    <main className="px-6 py-20 md:py-24 bg-linear-to-b from-[#06000f]/70 via-[#0d0518]/70 to-[#040007]/70">
-      <div className="mx-auto max-w-4xl">
-        <h1 className="text-4xl font-semibold uppercase tracking-tight text-[#f4efff] md:text-6xl">JOIN</h1>
+            <h1 className="mt-6 text-5xl font-bold uppercase leading-[0.9] text-white md:text-7xl">
+              BUILD
+              <br />
+              <span className="bg-gradient-to-r from-purple-400 to-fuchsia-300 bg-clip-text text-transparent">
+                WITH US.
+              </span>
+            </h1>
 
-        <div className="mt-10 space-y-3 text-sm uppercase tracking-tight text-[#b5a9cf] md:text-base">
-          <p>IF YOU BUILD, APPLY.</p>
-          <p>THIS IS NOT FOR EVERYONE.</p>
-          <p>NO SPECTATORS. NO PASSIVE MEMBERS.</p>
+            <p className="mx-auto mt-8 max-w-2xl text-lg text-zinc-400">
+              Not a club. Not a course.
+              <br />A community of teenagers building projects, startups,
+              communities, and ideas in public.
+            </p>
+
+            <a
+              href={FORM_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-10 inline-flex items-center gap-2 rounded-xl border border-purple-500/30 bg-purple-500/10 px-8 py-4 text-sm font-medium uppercase tracking-wider text-white transition-all duration-300 hover:scale-105 hover:border-purple-400 hover:shadow-[0_0_30px_rgba(168,85,247,0.35)] active:scale-95"
+            >
+              APPLY NOW →
+            </a>
+          </section>
+
+          {/* WHO SHOULD APPLY */}
+          <section className="mt-28">
+            <h2 className="text-center text-sm uppercase tracking-[0.25em] text-purple-300">
+              WHO SHOULD APPLY
+            </h2>
+
+            <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+              <div className="rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-6 backdrop-blur">
+                <h3 className="text-lg font-semibold text-white">BUILDERS</h3>
+
+                <p className="mt-3 text-sm text-zinc-400">
+                  Apps, AI tools, websites, open-source projects, experiments.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-6 backdrop-blur">
+                <h3 className="text-lg font-semibold text-white">DESIGNERS</h3>
+
+                <p className="mt-3 text-sm text-zinc-400">
+                  UI/UX, branding, graphics, motion design and visual systems.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-6 backdrop-blur">
+                <h3 className="text-lg font-semibold text-white">DEVELOPERS</h3>
+
+                <p className="mt-3 text-sm text-zinc-400">
+                  Frontend, backend, AI, automation, product engineering.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-6 backdrop-blur">
+                <h3 className="text-lg font-semibold text-white">FOUNDERS</h3>
+
+                <p className="mt-3 text-sm text-zinc-400">
+                  Startup builders, community leaders and ambitious creators.
+                </p>
+              </div>
+            </div>
+          </section>
+          <section className="mt-28">
+            <h2 className="text-center text-sm uppercase tracking-[0.25em] text-purple-300">
+              NOT FOR YOU IF
+            </h2>
+
+            <div className="mt-10 grid gap-6 md:grid-cols-2">
+              <div className="rounded-2xl border border-red-500/20 bg-[#0c0815]/60 p-8">
+                <h3 className="text-lg font-semibold text-red-300">
+                  Probably Not
+                </h3>
+
+                <ul className="mt-4 space-y-3 text-sm text-zinc-400">
+                  <li>✕ You're only looking for certificates</li>
+                  <li>✕ You want passive membership</li>
+                  <li>✕ You just want a title on your profile</li>
+                </ul>
+              </div>
+
+              <div className="rounded-2xl border border-green-500/20 bg-[#0c0815]/60 p-8">
+                <h3 className="text-lg font-semibold text-green-300">
+                  You'll Fit In
+                </h3>
+
+                <ul className="mt-4 space-y-3 text-sm text-zinc-400">
+                  <li>✓ You like building things</li>
+                  <li>✓ You enjoy learning in public</li>
+                  <li>✓ You want to work with ambitious people</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* PROCESS */}
+          <section className="mt-28">
+            <h2 className="text-center text-sm uppercase tracking-[0.25em] text-purple-300">
+              HOW IT WORKS
+            </h2>
+
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
+              <div className="rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-8">
+                <p className="text-4xl font-bold text-purple-400">01</p>
+
+                <h3 className="mt-4 text-xl font-semibold text-white">
+                  Submit Application
+                </h3>
+
+                <p className="mt-2 text-sm text-zinc-400">
+                  Tell us what you're building or what you want to build.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-8">
+                <p className="text-4xl font-bold text-purple-400">02</p>
+
+                <h3 className="mt-4 text-xl font-semibold text-white">
+                  Builder Review
+                </h3>
+
+                <p className="mt-2 text-sm text-zinc-400">
+                  We'll connect with you and learn more about your interests.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-8">
+                <p className="text-4xl font-bold text-purple-400">03</p>
+
+                <h3 className="mt-4 text-xl font-semibold text-white">
+                  Access Granted
+                </h3>
+
+                <p className="mt-2 text-sm text-zinc-400">
+                  Join events, collaborate on projects and ship things publicly.
+                </p>
+              </div>
+            </div>
+          </section>
+          <section className="mt-24">
+            <div className="rounded-3xl border border-purple-500/20 bg-[#0c0815]/60 p-10 text-center">
+              <h2 className="text-3xl font-bold text-white">
+                MEET THE COMMUNITY FIRST.
+              </h2>
+
+              <p className="mx-auto mt-4 max-w-xl text-zinc-400">
+                Join the Discord. Meet builders, explore projects, ask questions
+                and see what we're building before you apply.
+              </p>
+
+              <a
+                href={DISCORD_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-6 inline-flex items-center gap-2 rounded-xl border border-purple-500/30 bg-purple-500/10 px-8 py-4 text-sm font-medium uppercase tracking-wider text-white transition-all duration-300 hover:scale-105 hover:border-purple-400 hover:shadow-[0_0_30px_rgba(168,85,247,0.35)] active:scale-95"
+              >
+                JOIN DISCORD →
+              </a>
+            </div>
+          </section>
+          {/* FINAL CTA */}
+          <section className="mt-28 text-center">
+            <div className="rounded-3xl border border-purple-500/20 bg-[#0c0815]/60 p-10 md:p-16">
+              <h2 className="text-4xl font-bold uppercase text-white md:text-6xl">
+                DON'T WAIT FOR
+                <br />
+                <span className="bg-gradient-to-r from-purple-400 to-fuchsia-300 bg-clip-text text-transparent">
+                  PERMISSION.
+                </span>
+                <br />
+                BUILD SOMETHING.
+              </h2>
+
+              <p className="mx-auto mt-6 max-w-2xl text-zinc-400">
+                If you're curious, ambitious and willing to build, you're
+                already halfway in.
+              </p>
+
+              <a
+                href={FORM_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-8 inline-flex items-center gap-2 rounded-xl border border-purple-500/30 bg-purple-500/10 px-8 py-4 text-sm font-medium uppercase tracking-wider text-white transition-all duration-300 hover:scale-105 hover:border-purple-400 hover:shadow-[0_0_30px_rgba(168,85,247,0.35)] active:scale-95"
+              >
+                APPLY NOW →
+              </a>
+            </div>
+          </section>
         </div>
-
-        <div className="mt-12 border-t border-[#4a3c67] pt-8 text-sm uppercase tracking-tight text-[#f4efff] md:text-base">
-          <p>SHOW:</p>
-          <p className="mt-2 text-[#b5a9cf]">- WHAT YOU&apos;VE BUILT</p>
-          <p className="text-[#b5a9cf]">- OR WHAT YOU&apos;RE TRYING TO BUILD</p>
-          <p className="mt-5">THAT&apos;S ENOUGH.</p>
-        </div>
-
-        <div className="mt-12">
-          <a
-            href={FORM_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center border border-[#d2b4ff] bg-[#1a112b] px-5 py-2.5 text-sm font-medium uppercase tracking-tight text-[#f4efff] transition hover:bg-[#d2b4ff] hover:text-[#120a1f]"
-          >
-            APPLY &rarr;
-          </a>
-        </div>
-
-        <div className="mt-10 text-sm uppercase tracking-tight text-[#9587b2]">
-          <p>IF IT MAKES SENSE TO YOU, YOU&apos;LL FIT IN.</p>
-        </div>
-      </div>
-    </main>
+      </main>
     </PageWrapper>
   );
 }

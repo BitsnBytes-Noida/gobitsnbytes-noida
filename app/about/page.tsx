@@ -1,6 +1,5 @@
 "use client";
 import PageWrapper from "@/components/PageWrapper";
-import { motion } from "framer-motion";
 import CountUp from "@/components/CountUp";
 import "../../styles/globals.css";
 import { useState } from "react";
