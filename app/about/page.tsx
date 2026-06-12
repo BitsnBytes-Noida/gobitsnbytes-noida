@@ -11,7 +11,7 @@ export default function About() {
       name: "Aryan Chauhan",
       role: "Lead",
       image: "/team/aryan.png",
-      bio: "Building the technical backbone of Bits&Bytes Noida.",
+      bio: "Building the backbone of Bits&Bytes Noida.",
     },
     {
       name: "Tanish Garg",
@@ -48,7 +48,7 @@ export default function About() {
     {
       name: "Nikita Yadav",
       role: "Contributor",
-      image: "/team/nikita.png",
+      image: "/team/nikita.jpg",
       bio: "Supporting community initiatives and builder programs.",
     },
     {
