@@ -331,27 +331,7 @@ export default function About() {
             </div>
           </section>
 
-          <section className="mt-20">
-            <h2 className="text-xs font-medium uppercase tracking-[0.18em] text-[#9a9a9a]">
-              REACH US
-            </h2>
-            <div className="mt-6 space-y-2">
-              <a
-                href="mailto:noida@gobitsnbytes.org"
-                className="block text-base text-[#e5e5e5] underline underline-offset-4 hover:text-white transition-colors"
-              >
-                noida@gobitsnbytes.org
-              </a>
-              <a
-                href="https://www.instagram.com/gobitsnbytes.noida/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-base text-[#e5e5e5] underline underline-offset-4 hover:text-white transition-colors"
-              >
-                @gobitsnbytes.noida
-              </a>
-            </div>
-          </section>
+          
         </div>
       </main>
     </PageWrapper>
