@@ -107,7 +107,7 @@ export default function Home() {
         <span className="particle particle-5 hidden md:block"></span>
       </div>
 
-      <div className="hero-glow absolute left-1/2 top-32 -z-10 h-[280px] w-[280px] -translate-x-1/2 rounded-full bg-purple-700/20 blur-[120px] md:top-40 md:h-[500px] md:w-[500px] md:blur-[150px]" />
+      <div className="hero-glow absolute left-1/2 top-32 -z-10 h-70 w-70 -translate-x-1/2 rounded-full bg-purple-700/20 blur-[120px] md:top-40 md:h-125 md:w-125 md:blur-[150px]" />
 
       <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 md:gap-14 lg:grid-cols-2 lg:gap-16">
         {/* Left Side */}
@@ -124,7 +124,7 @@ export default function Home() {
           >
             Build.
             <br />
-            <span className="bg-gradient-to-r from-purple-400 to-fuchsia-300 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-purple-400 to-fuchsia-300 bg-clip-text text-transparent">
               Ship.
             </span>
             <br />
@@ -178,7 +178,7 @@ export default function Home() {
               <div className="h-3 w-3 rounded-full bg-green-500" />
             </div>
 
-            <div className="h-[140px] p-4 font-mono text-xs sm:h-[180px] sm:p-6 sm:text-sm">
+            <div className="h-35 p-4 font-mono text-xs sm:h-45 sm:p-6 sm:text-sm">
               {displayedText.split("\n").map((line, i) => (
                 <div
                   key={i}
