@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Spotlight from "@/components/Spotlight";
 import GridBackground from "@/components/GridBackground";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Bits&Bytes Noida",
   description:
@@ -23,6 +24,7 @@ export default function RootLayout({
         <GridBackground />
         <Spotlight />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
