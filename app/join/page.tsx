@@ -1,10 +1,14 @@
 "use client";
 
+import PageWrapper from "@/components/PageWrapper";
+
 const FORM_URL = "https://forms.gle/SSAbJfczyuJLswPL8";
 
 export default function Join() {
   return (
-    <main className="px-6 py-20 md:py-24">
+    <PageWrapper>
+
+    <main className="px-6 py-20 md:py-24 bg-linear-to-b from-[#06000f]/70 via-[#0d0518]/70 to-[#040007]/70">
       <div className="mx-auto max-w-4xl">
         <h1 className="text-4xl font-semibold uppercase tracking-tight text-[#f4efff] md:text-6xl">JOIN</h1>
 
@@ -37,5 +41,6 @@ export default function Join() {
         </div>
       </div>
     </main>
+    </PageWrapper>
   );
 }

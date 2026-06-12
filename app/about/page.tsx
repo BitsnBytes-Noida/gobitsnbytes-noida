@@ -1,3 +1,5 @@
+import PageWrapper from "@/components/PageWrapper";
+
 export default function About() {
   const noidaCore = [
     {
@@ -52,7 +54,8 @@ export default function About() {
   ];
 
   return (
-    <main className="relative z-10 min-h-screen bg-gradient-to-b from-[#06000f]/70 via-[#0d0518]/70 to-[#040007]/70 px-6 py-16 text-[#e5e5e5] md:py-20">
+    <PageWrapper>
+    <main className="relative z-10 min-h-screen bg-linear-to-b from-[#06000f]/70 via-[#0d0518]/70 to-[#040007]/70 px-6 py-16 text-[#e5e5e5] md:py-20">
       <div className="mx-auto max-w-6xl">
         <h1 className="text-5xl font-bold uppercase tracking-tight text-white md:text-7xl md:leading-[0.95]">
           <span className="bg-linear-to-r from-purple-400 via-fuchsia-300 to-purple-500 bg-clip-text text-transparent">
@@ -167,5 +170,6 @@ export default function About() {
         </section>
       </div>
     </main>
+    </PageWrapper>
   );
 }

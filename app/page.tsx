@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import "../styles/globals.css";
 
 export default function Home() {
@@ -84,29 +85,27 @@ export default function Home() {
   }, [currentSet]);
 
   useEffect(() => {
-  const handleMouseMove = (e: MouseEvent) => {
-    document.documentElement.style.setProperty("--x", `${e.clientX}px`);
-    document.documentElement.style.setProperty("--y", `${e.clientY}px`);
-  };
+    const handleMouseMove = (e: MouseEvent) => {
+      document.documentElement.style.setProperty("--x", `${e.clientX}px`);
+      document.documentElement.style.setProperty("--y", `${e.clientY}px`);
+    };
 
-  window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
 
-  return () => {
-    window.removeEventListener("mousemove", handleMouseMove);
-  };
-}, []);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
   return (
     <main className="relative overflow-hidden px-5 py-16 sm:px-6 md:py-24 lg:py-32">
       <div className="particles absolute inset-0 pointer-events-none">
-  <span className="particle particle-1"></span>
-  <span className="particle particle-2"></span>
-  <span className="particle particle-3"></span>
-  <span className="particle particle-4 hidden md:block"></span>
-<span className="particle particle-5 hidden md:block"></span>
-</div>
-      
-      
+        <span className="particle particle-1"></span>
+        <span className="particle particle-2"></span>
+        <span className="particle particle-3"></span>
+        <span className="particle particle-4 hidden md:block"></span>
+        <span className="particle particle-5 hidden md:block"></span>
+      </div>
 
       <div className="hero-glow absolute left-1/2 top-32 -z-10 h-[280px] w-[280px] -translate-x-1/2 rounded-full bg-purple-700/20 blur-[120px] md:top-40 md:h-[500px] md:w-[500px] md:blur-[150px]" />
 
@@ -117,7 +116,12 @@ export default function Home() {
             BITS&BYTES NOIDA
           </p>
 
-          <h1 className="mt-6 text-4xl font-bold uppercase leading-[0.9] text-white sm:text-5xl md:text-6xl lg:text-7xl">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mt-6 text-4xl font-bold uppercase leading-[0.9] text-white sm:text-5xl md:text-6xl lg:text-7xl"
+          >
             Build.
             <br />
             <span className="bg-gradient-to-r from-purple-400 to-fuchsia-300 bg-clip-text text-transparent">
@@ -125,14 +129,19 @@ export default function Home() {
             </span>
             <br />
             Repeat.
-          </h1>
+          </motion.h1>
 
           <p className="mx-auto mt-6 max-w-xl text-base text-zinc-400 sm:text-lg lg:mx-0">
-            A city of teenage builders creating projects, startups,
-            communities and ideas in public.
+            A city of teenage builders creating projects, startups, communities
+            and ideas in public.
           </p>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
+          <motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.3 }}
+  className="mt-10 flex flex-col gap-4 sm:flex-row"
+>
             <a
               href="/join"
               className="group inline-flex w-full sm:w-auto justify-center items-center gap-2 rounded-lg border border-purple-500/40 bg-purple-500/10 px-6 py-3 text-sm font-medium uppercase tracking-wide text-white transition-all duration-200 hover:scale-105 hover:border-purple-400 hover:shadow-[0_0_30px_rgba(168,85,247,0.35)] active:scale-95 active:bg-purple-500/20 active:border-purple-300"
@@ -149,11 +158,19 @@ export default function Home() {
             >
               LEARN MORE
             </a>
-          </div>
+          </motion.div>
         </div>
 
         {/* Right Side Terminal */}
-        <div className="order-1 lg:order-2">
+        <motion.div
+  initial={{ opacity: 0, x: 40 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{
+    delay: 0.4,
+    duration: 0.8,
+  }}
+  className="order-1 lg:order-2"
+>
           <div className="mx-auto w-full max-w-md overflow-hidden rounded-2xl border border-purple-500/20 bg-black/60 backdrop-blur lg:max-w-lg">
             <div className="flex items-center gap-2 border-b border-purple-500/20 px-4 py-3">
               <div className="h-3 w-3 rounded-full bg-red-500" />
@@ -169,8 +186,8 @@ export default function Home() {
                     line.includes("✓")
                       ? "text-green-400"
                       : line.includes("$")
-                      ? "text-purple-300"
-                      : "text-zinc-400"
+                        ? "text-purple-300"
+                        : "text-zinc-400"
                   }
                 >
                   {line}
@@ -180,7 +197,7 @@ export default function Home() {
               <span className="animate-pulse text-white">▋</span>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </main>
   );
