@@ -111,7 +111,8 @@ export default function About() {
               innovate. collaborate. hack.
             </p>
           </section>
-          <section className="mt-16">
+          {/* STATS */}
+          {/* <section className="mt-16">
             <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
               <div>
                 <h3 className="text-4xl font-bold text-purple-400"><CountUp end={30} />+</h3>
@@ -133,7 +134,7 @@ export default function About() {
                 <p className="text-sm text-zinc-400">Ideas</p>
               </div>
             </div>
-          </section>
+          </section> */}
           <section className="relative mt-14">
             <h2 className="text-xs font-medium uppercase tracking-[0.18em] text-[#9a9a9a]">
               NOIDA CORE
