@@ -528,3 +528,28 @@
     transparent 40%
   );
 }
+
+.team-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.team-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 1rem;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(168, 85, 247, 0.7),
+    transparent
+  );
+
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.team-card:hover::before {
+  opacity: 1;
+}
