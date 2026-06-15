@@ -42,7 +42,7 @@ export default function About() {
       name: "Rashita Yadav",
       role: "Contributor",
       image: "/team/rashita.jpg",
-      bio: "Contributing to the growth and development of Bits&Bytes Noida.",
+      bio: "Actively contributing to projects and community growth.",
     },
     {
       name: "Nikita Yadav",
@@ -60,7 +60,7 @@ export default function About() {
       name: "Shubham Kaushik",
       role: "Contributor",
       image: "/team/shubham.jpg",
-      bio: "Actively contributing to projects and community growth.",
+      bio: "Contributing to the growth and development of Bits&Bytes Noida.",
     },
   ];
   const founders = [
