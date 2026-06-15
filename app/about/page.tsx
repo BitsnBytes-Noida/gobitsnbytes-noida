@@ -53,7 +53,7 @@ export default function About() {
     {
       name: "Prasiddhi Sai",
       role: "Contributor",
-      image: "/team/prasiddhi.png",
+      image: "/team/prasiddhi.jpg",
       bio: "Helping create opportunities and experiences for builders.",
     },
     {
@@ -305,7 +305,7 @@ export default function About() {
               NETWORK FOUNDERS
             </h2>
             <p className="mt-3 text-sm text-[#666]">
-              The founders of Bits&amp;Bytes. Reproduced from the parent org.
+              The founders of Bits&amp;Bytes. Originated from the parent org.
             </p>
             <div className="mt-8 flex flex-wrap gap-x-10 gap-y-8">
               {founders.map((member) => (
@@ -330,8 +330,6 @@ export default function About() {
               ))}
             </div>
           </section>
-
-          
         </div>
       </main>
     </PageWrapper>

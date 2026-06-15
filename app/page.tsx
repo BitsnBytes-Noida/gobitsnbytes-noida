@@ -98,7 +98,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="relative overflow-hidden px-5 py-16 sm:px-6 md:py-24 lg:py-32">
+    <main className="bg-linear-to-b from-[#06000f]/70 via-[#0d0518]/70 to-[#040007]/70 relative overflow-hidden px-5 py-16 sm:px-6 md:py-24 lg:py-32">
       <div className="particles absolute inset-0 pointer-events-none">
         <span className="particle particle-1"></span>
         <span className="particle particle-2"></span>
