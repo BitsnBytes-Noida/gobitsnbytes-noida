@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "../styles/globals.css";
+import Button from "@/components/ui/Button";
 
 export default function Home() {
   const terminalSets = [
@@ -137,40 +138,29 @@ export default function Home() {
           </p>
 
           <motion.div
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ delay: 0.3 }}
-  className="mt-10 flex flex-col gap-4 sm:flex-row"
->
-            <a
-              href="/join"
-              className="group inline-flex w-full sm:w-auto justify-center items-center gap-2 rounded-lg border border-purple-500/40 bg-purple-500/10 px-6 py-3 text-sm font-medium uppercase tracking-wide text-white transition-all duration-200 hover:scale-105 hover:border-purple-400 hover:shadow-[0_0_30px_rgba(168,85,247,0.35)] active:scale-95 active:bg-purple-500/20 active:border-purple-300"
-            >
-              JOIN NOIDA
-              <span className="transition-transform duration-300 group-hover:translate-x-1">
-                →
-              </span>
-            </a>
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="mt-10 flex flex-col gap-4 sm:flex-row"
+          >
+            <Button href="/join">JOIN NOIDA →</Button>
 
-            <a
-              href="/about"
-              className="w-full sm:w-auto rounded-lg border border-zinc-700 px-6 py-3 text-sm font-medium uppercase tracking-wide text-zinc-300 transition-all duration-200 hover:border-purple-500 hover:text-white active:scale-95 active:border-purple-400 active:text-white"
-            >
-              LEARN MORE
-            </a>
+            <Button href="/about" variant="secondary">
+              LEARN MORE →
+            </Button>
           </motion.div>
         </div>
 
         {/* Right Side Terminal */}
         <motion.div
-  initial={{ opacity: 0, x: 40 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{
-    delay: 0.4,
-    duration: 0.8,
-  }}
-  className="order-1 lg:order-2"
->
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            delay: 0.4,
+            duration: 0.8,
+          }}
+          className="order-1 lg:order-2"
+        >
           <div className="mx-auto w-full max-w-md overflow-hidden rounded-2xl border border-purple-500/20 bg-black/60 backdrop-blur lg:max-w-lg">
             <div className="flex items-center gap-2 border-b border-purple-500/20 px-4 py-3">
               <div className="h-3 w-3 rounded-full bg-red-500" />

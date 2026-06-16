@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { primaryNavLinks } from "@/data/navigation";
+import Button from "../ui/Button";
 
 export default function Navbar() {
   
@@ -72,14 +73,12 @@ export default function Navbar() {
             </Link>
           ))}
 
-          
-
-          <Link
-            href="/join"
-            className="rounded-lg border border-purple-500/30 bg-purple-500/10 px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:border-purple-400 hover:bg-purple-500/20 hover:shadow-[0_0_20px_rgba(168,85,247,0.35)] active:scale-95"
+          <Button
+          href="/join"
+          size="sm"
           >
             JOIN →
-          </Link>
+          </Button>
         </div>
 
         {/* Mobile Menu */}

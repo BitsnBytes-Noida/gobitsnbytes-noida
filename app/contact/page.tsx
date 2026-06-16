@@ -1,8 +1,8 @@
 "use client";
 
 import PageWrapper from "@/components/layout/PageWrapper";
+import Button from "@/components/ui/Button";
 import { socialLinks } from "@/data/socials";
-
 
 export default function Contact() {
   return (
@@ -24,8 +24,8 @@ export default function Contact() {
             </h1>
 
             <p className="mx-auto mt-8 max-w-2xl text-lg text-zinc-400">
-              Questions, ideas, partnerships, or just want to build
-              something interesting?
+              Questions, ideas, partnerships, or just want to build something
+              interesting?
               <br />
               We'd love to hear from you.
             </p>
@@ -113,8 +113,8 @@ export default function Contact() {
             </h2>
 
             <p className="mx-auto mt-6 max-w-2xl text-zinc-400">
-              Reach out through any of the channels above.
-              We'll get back to you as soon as possible.
+              Reach out through any of the channels above. We'll get back to you
+              as soon as possible.
             </p>
           </section>
 
@@ -130,18 +130,13 @@ export default function Contact() {
               </h2>
 
               <p className="mx-auto mt-6 max-w-2xl text-zinc-400">
-                Join the community, meet ambitious builders and start
-                working on things that matter.
+                Join the community, meet ambitious builders and start working on
+                things that matter.
               </p>
 
-              <a
-                href={socialLinks.discord}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-8 inline-flex items-center gap-2 rounded-xl border border-purple-500/30 bg-purple-500/10 px-8 py-4 text-sm font-medium uppercase tracking-wider text-white transition-all duration-300 hover:scale-105 hover:border-purple-400 hover:shadow-[0_0_30px_rgba(168,85,247,0.35)] active:scale-95"
-              >
+              <Button href={socialLinks.discord} className="mt-8" external>
                 JOIN DISCORD →
-              </a>
+              </Button>
             </div>
           </section>
         </div>

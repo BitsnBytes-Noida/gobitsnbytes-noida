@@ -1,6 +1,7 @@
 "use client";
 
 import PageWrapper from "@/components/layout/PageWrapper";
+import Button from "@/components/ui/Button";
 
 const FORM_URL = "https://forms.gle/SSAbJfczyuJLswPL8";
 const DISCORD_URL = "https://discord.gg/u9Dkntjdy";
@@ -30,14 +31,9 @@ export default function Join() {
               communities, and ideas in public.
             </p>
 
-            <a
-              href={FORM_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-10 inline-flex items-center gap-2 rounded-xl border border-purple-500/30 bg-purple-500/10 px-8 py-4 text-sm font-medium uppercase tracking-wider text-white transition-all duration-300 hover:scale-105 hover:border-purple-400 hover:shadow-[0_0_30px_rgba(168,85,247,0.35)] active:scale-95"
-            >
+            <Button href={FORM_URL} className="mt-8" external>
               APPLY NOW →
-            </a>
+            </Button>
           </section>
 
           {/* WHO SHOULD APPLY */}
@@ -167,14 +163,9 @@ export default function Join() {
                 and see what we're building before you apply.
               </p>
 
-              <a
-                href={DISCORD_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-6 inline-flex items-center gap-2 rounded-xl border border-purple-500/30 bg-purple-500/10 px-8 py-4 text-sm font-medium uppercase tracking-wider text-white transition-all duration-300 hover:scale-105 hover:border-purple-400 hover:shadow-[0_0_30px_rgba(168,85,247,0.35)] active:scale-95"
-              >
+              <Button href={DISCORD_URL} className="mt-8" external>
                 JOIN DISCORD →
-              </a>
+              </Button>
             </div>
           </section>
           {/* FINAL CTA */}
@@ -195,14 +186,9 @@ export default function Join() {
                 already halfway in.
               </p>
 
-              <a
-                href={FORM_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-8 inline-flex items-center gap-2 rounded-xl border border-purple-500/30 bg-purple-500/10 px-8 py-4 text-sm font-medium uppercase tracking-wider text-white transition-all duration-300 hover:scale-105 hover:border-purple-400 hover:shadow-[0_0_30px_rgba(168,85,247,0.35)] active:scale-95"
-              >
+              <Button href={FORM_URL} className="mt-8" external>
                 APPLY NOW →
-              </a>
+              </Button>
             </div>
           </section>
         </div>
