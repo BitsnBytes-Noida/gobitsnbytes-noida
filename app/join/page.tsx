@@ -1,6 +1,6 @@
 "use client";
 
-import PageWrapper from "@/components/PageWrapper";
+import PageWrapper from "@/components/layout/PageWrapper";
 
 const FORM_URL = "https://forms.gle/SSAbJfczyuJLswPL8";
 const DISCORD_URL = "https://discord.gg/u9Dkntjdy";

@@ -1,10 +1,8 @@
 "use client";
 
-import PageWrapper from "@/components/PageWrapper";
+import PageWrapper from "@/components/layout/PageWrapper";
+import { socialLinks } from "@/data/socials";
 
-const EMAIL = "noida@gobitsnbytes.org";
-const DISCORD = "YOUR_DISCORD_INVITE_LINK";
-const INSTAGRAM = "https://www.instagram.com/gobitsnbytes.noida/";
 
 export default function Contact() {
   return (
@@ -38,7 +36,7 @@ export default function Contact() {
             <div className="grid gap-6 md:grid-cols-3">
               {/* Email */}
               <a
-                href={`mailto:${EMAIL}`}
+                href={`mailto:${socialLinks.email}`}
                 className="group rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-purple-400/40 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)]"
               >
                 <p className="text-sm uppercase tracking-[0.2em] text-purple-300">
@@ -46,7 +44,7 @@ export default function Contact() {
                 </p>
 
                 <h3 className="mt-4 text-xl font-semibold text-white">
-                  {EMAIL}
+                  {socialLinks.email}
                 </h3>
 
                 <p className="mt-4 text-sm text-zinc-400">
@@ -60,7 +58,7 @@ export default function Contact() {
 
               {/* Discord */}
               <a
-                href={DISCORD}
+                href={socialLinks.discord}
                 target="_blank"
                 rel="noreferrer"
                 className="group rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-purple-400/40 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)]"
@@ -84,7 +82,7 @@ export default function Contact() {
 
               {/* Instagram */}
               <a
-                href={INSTAGRAM}
+                href={socialLinks.instagram}
                 target="_blank"
                 rel="noreferrer"
                 className="group rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-purple-400/40 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)]"
@@ -137,7 +135,7 @@ export default function Contact() {
               </p>
 
               <a
-                href={DISCORD}
+                href={socialLinks.discord}
                 target="_blank"
                 rel="noreferrer"
                 className="mt-8 inline-flex items-center gap-2 rounded-xl border border-purple-500/30 bg-purple-500/10 px-8 py-4 text-sm font-medium uppercase tracking-wider text-white transition-all duration-300 hover:scale-105 hover:border-purple-400 hover:shadow-[0_0_30px_rgba(168,85,247,0.35)] active:scale-95"

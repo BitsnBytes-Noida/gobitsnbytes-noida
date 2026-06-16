@@ -4,8 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { primaryNavLinks } from "@/data/navigation";
 
 export default function Navbar() {
+  
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -21,11 +23,7 @@ export default function Navbar() {
     };
   }, []);
 
-  const primaryNavLinks = [
-  { href: "/", label: "HOME" },
-  { href: "/about", label: "ABOUT" },
-  { href: "/contact", label: "CONTACT" },
-];
+  
 
   return (
     <nav
