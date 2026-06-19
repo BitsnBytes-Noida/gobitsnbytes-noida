@@ -1,6 +1,5 @@
 "use client";
 import PageWrapper from "@/components/layout/PageWrapper";
-import CountUp from "@/components/CountUp";
 import "../../styles/globals.css";
 import { useState } from "react";
 import { noidaCore, contributors, founders } from "@/data/team";
@@ -37,30 +36,6 @@ export default function About() {
               innovate. collaborate. hack.
             </p>
           </section>
-          {/* STATS */}
-          {/* <section className="mt-16">
-            <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
-              <div>
-                <h3 className="text-4xl font-bold text-purple-400"><CountUp end={30} />+</h3>
-                <p className="text-sm text-zinc-400">Builders</p>
-              </div>
-
-              <div>
-                <h3 className="text-4xl font-bold text-purple-400"><CountUp end={10} />+</h3>
-                <p className="text-sm text-zinc-400">Projects</p>
-              </div>
-
-              <div>
-                <h3 className="text-4xl font-bold text-purple-400"><CountUp end={1} /></h3>
-                <p className="text-sm text-zinc-400">City</p>
-              </div>
-
-              <div>
-                <h3 className="text-4xl font-bold text-purple-400"><CountUp end={999} />+</h3>
-                <p className="text-sm text-zinc-400">Ideas</p>
-              </div>
-            </div>
-          </section> */}
           <section className="relative mt-14">
             <h2 className="text-xs font-medium uppercase tracking-[0.18em] text-[#9a9a9a]">
               NOIDA CORE

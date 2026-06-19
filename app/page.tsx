@@ -8,6 +8,7 @@ import Button from "@/components/ui/Button";
 export default function Home() {
   const terminalSets = [
     [
+      
       "bits@noida:~$ create project",
       "> initializing...",
       "> building components...",
