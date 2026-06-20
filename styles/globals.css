@@ -571,3 +571,11 @@
 .team-card:hover::before {
   opacity: 1;
 }
+
+.card-glow {
+  background: radial-gradient(
+    250px circle at var(--mouse-x) var(--mouse-y),
+    rgba(34, 211, 238, 0.15),
+    transparent 45%
+  );
+}

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { exploreLinks } from "@/data/explore";
+import TiltCard from "../ui/TiltCard";
 
 export default function ExploreSection() {
   return (
@@ -18,38 +19,90 @@ export default function ExploreSection() {
           </h2>
 
           <p className="mt-6 max-w-md text-lg text-zinc-400">
-            Everything you need to know about the community, the builders,
-            and how to get involved.
+            Everything you need to know about the community, the builders, and
+            how to get involved.
           </p>
         </div>
 
         {/* Right Cards */}
         <div className="grid w-full gap-6 md:grid-cols-2">
           {exploreLinks.map((item, index) => (
-            <Link
-              key={item.title}
-              href={item.href}
-              target={item.external ? "_blank" : undefined}
-              rel={item.external ? "noreferrer" : undefined}
-              className="group relative overflow-hidden rounded-3xl border border-blue-500/20 bg-[#0f172a]/50 p-8 backdrop-blur transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400/40 hover:shadow-[0_20px_60px_rgba(34,211,238,0.15)]"
-            >
-              {/* Large Number */}
-              <span className="absolute right-6 top-4 text-7xl font-bold text-white/5">
-                {String(index + 1).padStart(2, "0")}
-              </span>
+            <TiltCard>
+              <Link
+                key={item.title}
+                href={item.href}
+                target={item.external ? "_blank" : undefined}
+                rel={item.external ? "noreferrer" : undefined}
+                className="
+group
+relative
+flex
+min-h-[260px]
+flex-col
+justify-between
+overflow-hidden
+rounded-3xl
+border
+border-cyan-500/10
+bg-gradient-to-br
+from-[#08111f]
+to-[#0b1324]
+p-8
+backdrop-blur-xl
+transition-all
+duration-500
+hover:border-cyan-400/40
+hover:shadow-[0_25px_80px_rgba(34,211,238,0.15)]
 
-              <h3 className="relative z-10 text-2xl font-bold text-white">
-                {item.title}
-              </h3>
+"
+              >
+                {/* Cursor Glow */}
+                <div className="card-glow absolute inset-0 z-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-              <p className="relative z-10 mt-4 text-zinc-400">
-                {item.description}
-              </p>
+                {/* Border Glow */}
+                <div className="absolute inset-0 z-0 rounded-3xl border border-cyan-400/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                  <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-cyan-500/10 blur-3xl" />
+                </div>
+                <h3
+                  style={{ transform: "translateZ(40px)" }}
+                  className="
+relative
+z-10
+text-3xl
+font-bold
+text-white
+transition-transform
+duration-300
+group-hover:-translate-y-1
+"
+                >
+                  {item.title}
+                </h3>
 
-              <div className="relative z-10 mt-8 flex items-center gap-2 text-cyan-300 transition-all duration-300 group-hover:translate-x-1">
-                Explore →
-              </div>
-            </Link>
+                <p
+                  style={{ transform: "translateZ(25px)" }}
+                  className="relative z-10 mt-4 text-zinc-400"
+                >
+                  {item.description}
+                </p>
+
+                <div
+                  style={{ transform: "translateZ(60px)" }}
+                  className="
+relative
+z-10
+mt-8
+text-cyan-300
+transition-all
+duration-300
+group-hover:translate-x-2
+"
+                >
+                  Learn More →
+                </div>
+              </Link>
+            </TiltCard>
           ))}
         </div>
       </div>
