@@ -4,88 +4,8 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "../styles/globals.css";
 import Button from "@/components/ui/Button";
-
+import HomeTerminal from "@/components/sections/TerminalDemo";
 export default function Home() {
-  const terminalSets = [
-    [
-      
-      "bits@noida:~$ create project",
-      "> initializing...",
-      "> building components...",
-      "> running tests...",
-      "✓ deployed",
-    ],
-    [
-      "builder@noida:~$ find builders",
-      "> scanning network...",
-      "> matching interests...",
-      "> 12 builders found",
-      "✓ connected",
-    ],
-    [
-      "bits@noida:~$ join community",
-      "> creating profile...",
-      "> syncing city fork...",
-      "> granting access...",
-      "✓ welcome aboard",
-    ],
-    [
-      "aryan@noida:~$ start hackathon",
-      "> inviting members...",
-      "> creating teams...",
-      "> generating channels...",
-      "✓ event live",
-    ],
-  ];
-
-  const [displayedText, setDisplayedText] = useState("");
-  const [currentSet, setCurrentSet] = useState(0);
-
-  useEffect(() => {
-    let typingInterval: NodeJS.Timeout;
-    let deletingInterval: NodeJS.Timeout;
-
-    const text = terminalSets[currentSet].join("\n");
-
-    const typeText = () => {
-      let i = 0;
-
-      typingInterval = setInterval(() => {
-        if (i <= text.length) {
-          setDisplayedText(text.slice(0, i));
-          i++;
-        } else {
-          clearInterval(typingInterval);
-
-          setTimeout(() => {
-            deleteText(text);
-          }, 1800);
-        }
-      }, 35);
-    };
-
-    const deleteText = (text: string) => {
-      let i = text.length;
-
-      deletingInterval = setInterval(() => {
-        if (i >= 0) {
-          setDisplayedText(text.slice(0, i));
-          i--;
-        } else {
-          clearInterval(deletingInterval);
-          setCurrentSet((prev) => (prev + 1) % terminalSets.length);
-        }
-      }, 15);
-    };
-
-    typeText();
-
-    return () => {
-      clearInterval(typingInterval);
-      clearInterval(deletingInterval);
-    };
-  }, [currentSet]);
-
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       document.documentElement.style.setProperty("--x", `${e.clientX}px`);
@@ -153,42 +73,7 @@ export default function Home() {
         </div>
 
         {/* Right Side Terminal */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{
-            delay: 0.4,
-            duration: 0.8,
-          }}
-          className="order-1 lg:order-2"
-        >
-          <div className="mx-auto w-full max-w-md overflow-hidden rounded-2xl border border-purple-500/20 bg-black/60 backdrop-blur lg:max-w-lg">
-            <div className="flex items-center gap-2 border-b border-purple-500/20 px-4 py-3">
-              <div className="h-3 w-3 rounded-full bg-red-500" />
-              <div className="h-3 w-3 rounded-full bg-yellow-500" />
-              <div className="h-3 w-3 rounded-full bg-green-500" />
-            </div>
-
-            <div className="h-35 p-4 font-mono text-xs sm:h-45 sm:p-6 sm:text-sm">
-              {displayedText.split("\n").map((line, i) => (
-                <div
-                  key={i}
-                  className={
-                    line.includes("✓")
-                      ? "text-green-400"
-                      : line.includes("$")
-                        ? "text-purple-300"
-                        : "text-zinc-400"
-                  }
-                >
-                  {line}
-                </div>
-              ))}
-
-              <span className="animate-pulse text-white">▋</span>
-            </div>
-          </div>
-        </motion.div>
+        <HomeTerminal />
       </div>
     </main>
   );
