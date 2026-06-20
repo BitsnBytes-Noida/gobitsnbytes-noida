@@ -5,33 +5,33 @@
 
 :root {
   /* Canonical Bits&Bytes brand palette (Brand Kit) */
-  --bb-burgundy-100: #97192C;
+  --bb-burgundy-100: #97192c;
   --bb-burgundy-80: #791423;
-  --bb-burgundy-60: #5B0F1A;
-  --bb-burgundy-40: #3C0A12;
-  --bb-burgundy-20: #1E0509;
+  --bb-burgundy-60: #5b0f1a;
+  --bb-burgundy-40: #3c0a12;
+  --bb-burgundy-20: #1e0509;
 
-  --bb-neutral-100: #120F0A;
-  --bb-neutral-80: #413F3B;
-  --bb-neutral-60: #716F6C;
-  --bb-neutral-40: #A09F9D;
-  --bb-neutral-20: #D0CFCE;
+  --bb-neutral-100: #120f0a;
+  --bb-neutral-80: #413f3b;
+  --bb-neutral-60: #716f6c;
+  --bb-neutral-40: #a09f9d;
+  --bb-neutral-20: #d0cfce;
 
-  --bb-orange-100: #FC920D;
-  --bb-orange-80: #FDA83D;
-  --bb-orange-60: #FDBE6E;
-  --bb-orange-40: #FED39E;
-  --bb-orange-20: #FEE9CF;
+  --bb-orange-100: #fc920d;
+  --bb-orange-80: #fda83d;
+  --bb-orange-60: #fdbe6e;
+  --bb-orange-40: #fed39e;
+  --bb-orange-20: #fee9cf;
 
-  --bb-warm-100: #C94218;
-  --bb-warm-80: #D46846;
-  --bb-warm-60: #DF8E74;
-  --bb-warm-40: #E9B3A3;
-  --bb-warm-20: #F4D9D1;
+  --bb-warm-100: #c94218;
+  --bb-warm-80: #d46846;
+  --bb-warm-60: #df8e74;
+  --bb-warm-40: #e9b3a3;
+  --bb-warm-20: #f4d9d1;
 
-  --bb-pink: #E45A92;
-  --bb-plum: #5D2F77;
-  --bb-deep-purple: #3E1E68;
+  --bb-pink: #e45a92;
+  --bb-plum: #5d2f77;
+  --bb-deep-purple: #3e1e68;
 
   /* Legacy aliases (keeps existing classnames working while using canonical palette) */
   --brand-purple: var(--bb-deep-purple);
@@ -199,7 +199,11 @@
   }
 
   .glass-panel {
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.65));
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.85),
+      rgba(255, 255, 255, 0.65)
+    );
     border: 1px solid rgba(62, 30, 104, 0.12);
     box-shadow: var(--shadow-card);
     @apply rounded-3xl backdrop-blur-3xl dark:border-white/10 dark:bg-white/5;
@@ -398,7 +402,12 @@
   }
 
   .text-gradient {
-    background-image: linear-gradient(120deg, var(--brand-coral), var(--brand-pink), var(--brand-purple));
+    background-image: linear-gradient(
+      120deg,
+      var(--brand-coral),
+      var(--brand-pink),
+      var(--brand-purple)
+    );
     -webkit-background-clip: text;
     color: transparent;
   }
@@ -413,14 +422,21 @@
     inset: -1px;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(120deg, rgba(228, 90, 146, 0.8), rgba(93, 47, 119, 0.3));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    background: linear-gradient(
+      120deg,
+      rgba(228, 90, 146, 0.8),
+      rgba(93, 47, 119, 0.3)
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
   }
 
   .animate-scroll {
-    animation: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+    animation: scroll var(--animation-duration, 40s)
+      var(--animation-direction, forwards) linear infinite;
   }
 }
 
@@ -439,8 +455,8 @@
   z-index: -50;
 
   background-image:
-    linear-gradient(rgba(168, 85, 247, 0.2) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(168, 85, 247, 0.2) 1px, transparent 1px);
+    linear-gradient(rgba(59, 130, 246, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.12) 1px, transparent 1px);
 
   background-size: 40px 40px;
   animation: gridMove 15s linear infinite;
@@ -476,8 +492,8 @@
   width: 4px;
   height: 4px;
   border-radius: 9999px;
-  background: #a855f7;
-  box-shadow: 0 0 15px #a855f7;
+  background: #22d3ee;
+  box-shadow: 0 0 15px #22d3ee;
   animation: floatParticle 8s ease-in-out infinite;
 }
 
@@ -511,7 +527,8 @@
 }
 
 @keyframes floatParticle {
-  0%,100% {
+  0%,
+  100% {
     transform: translateY(0px);
     opacity: 0.3;
   }
@@ -524,7 +541,8 @@
 #spotlight {
   background: radial-gradient(
     500px circle at var(--x) var(--y),
-    rgba(168, 85, 247, 0.12),
+    rgba(59, 130, 246, 0.1),
+    rgba(34, 211, 238, 0.06),
     transparent 40%
   );
 }

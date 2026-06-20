@@ -10,12 +10,12 @@ export default function About() {
 
   return (
     <PageWrapper>
-      <main className="relative z-10 min-h-screen bg-linear-to-b from-[#06000f]/70 via-[#0d0518]/70 to-[#040007]/70 px-6 py-16 text-[#e5e5e5] md:py-20">
+      <main className="relative z-10 min-h-screen bg-linear-to-b from-[#020617]/80 via-[#0f172a]/70 to-[#020617]/80 px-6 py-16 text-[#e5e5e5] md:py-20">
         <div className="mx-auto max-w-6xl">
           <h1 className="text-5xl font-bold uppercase md:text-7xl">
             BUILDERS.
             <br />
-            <span className="bg-linear-to-r from-purple-400 via-fuchsia-300 to-purple-500 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-blue-400 via-fuchsia-300 to-purple-500 bg-clip-text text-transparent">
               NOT MEMBERS.
             </span>
           </h1>
@@ -40,7 +40,7 @@ export default function About() {
             <h2 className="text-xs font-medium uppercase tracking-[0.18em] text-[#9a9a9a]">
               NOIDA CORE
             </h2>
-            <div className="absolute left-1/2 top-0 h-64 w-64 -translate-x-1/2 rounded-full bg-purple-700/20 blur-3xl" />
+            <div className="absolute left-1/2 top-0 h-64 w-64 -translate-x-1/2 rounded-full bg-cyan-500/20 blur-3xl" />
             <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
               {noidaCore.map((member) => (
                 <TeamCard
@@ -91,7 +91,7 @@ export default function About() {
               {founders.map((member) => (
                 <div
                   key={member.name}
-                  className="flex items-center gap-4 rounded-xl border border-purple-500/10 bg-[#0c0815]/40 p-4 transition-all duration-300 hover:border-purple-500/30"
+                  className="flex items-center gap-4 rounded-xl border border-purple-500/10 bg-[#0c0815]/40 p-4 transition-all duration-300 hover:border-blue-500/30"
                 >
                   <img
                     src={member.image}

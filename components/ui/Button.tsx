@@ -26,10 +26,10 @@ const sizes = {
 
   const variants = {
   primary:
-    "border border-purple-500/30 bg-purple-500/10 text-white hover:scale-105 hover:border-purple-400 hover:shadow-[0_0_30px_rgba(168,85,247,0.35)]",
+    "border border-blue-500/30 bg-blue-500/10 text-white hover:scale-105 hover:border-blue-400 hover:shadow-[0_0_30px_rgba(34,211,238,0.35)]",
 
     secondary:
-      "border border-zinc-700 px-8 py-4 text-zinc-300 hover:border-purple-500 hover:text-white",
+      "border border-zinc-700 px-8 py-4 text-zinc-300 hover:border-blue-500 hover:text-white",
   };
 
   const styles = `${base} ${sizes[size]} ${variants[variant]} ${className}`;

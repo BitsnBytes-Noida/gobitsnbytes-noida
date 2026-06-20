@@ -20,7 +20,9 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="bg-linear-to-b from-[#06000f]/70 via-[#0d0518]/70 to-[#040007]/70 relative overflow-hidden px-5 py-16 sm:px-6 md:py-24 lg:py-32">
+    <main className="bg-linear-to-b from-[#020617]/80
+via-[#0f172a]/70
+to-[#020617]/80 relative overflow-hidden px-5 py-16 sm:px-6 md:py-24 lg:py-32">
       <div className="particles absolute inset-0 pointer-events-none">
         <span className="particle particle-1"></span>
         <span className="particle particle-2"></span>
@@ -29,12 +31,12 @@ export default function Home() {
         <span className="particle particle-5 hidden md:block"></span>
       </div>
 
-      <div className="hero-glow absolute left-1/2 top-32 -z-10 h-70 w-70 -translate-x-1/2 rounded-full bg-purple-700/20 blur-[120px] md:top-40 md:h-125 md:w-125 md:blur-[150px]" />
+      <div className="hero-glow absolute left-1/2 top-32 -z-10 h-70 w-70 -translate-x-1/2 rounded-full bg-cyan-500/20 blur-[120px] md:top-40 md:h-125 md:w-125 md:blur-[150px]" />
 
       <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 md:gap-14 lg:grid-cols-2 lg:gap-16">
         {/* Left Side */}
         <div className="order-0 text-center lg:text-left">
-          <p className="text-xs uppercase tracking-[0.25em] text-purple-300">
+          <p className="text-xs uppercase tracking-[0.25em] text-cyan-300">
             BITS&BYTES NOIDA
           </p>
 
@@ -46,7 +48,7 @@ export default function Home() {
           >
             Build.
             <br />
-            <span className="bg-linear-to-r from-purple-400 to-fuchsia-300 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
               Ship.
             </span>
             <br />

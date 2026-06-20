@@ -19,7 +19,7 @@ export default function Footer() {
           {/* Navigation */}
           <div className="flex gap-12">
             <div>
-              <p className="mb-3 text-xs uppercase tracking-[0.2em] text-purple-300">
+              <p className="mb-3 text-xs uppercase tracking-[0.2em] text-cyan-300">
                 Navigate
               </p>
 
@@ -32,7 +32,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <p className="mb-3 text-xs uppercase tracking-[0.2em] text-purple-300">
+              <p className="mb-3 text-xs uppercase tracking-[0.2em] text-cyan-300">
                 Socials
               </p>
 

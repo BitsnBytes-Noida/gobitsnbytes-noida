@@ -10,18 +10,22 @@ const DISCORD_URL = "https://discord.gg/u9Dkntjdy";
 export default function Join() {
   return (
     <PageWrapper>
-      <main className="relative z-10 min-h-screen bg-linear-to-b from-[#06000f]/70 via-[#0d0518]/70 to-[#040007]/70 px-6 py-20 md:py-24">
+      <main
+        className="relative z-10 min-h-screen bg-linear-to-b from-[#020617]/80
+via-[#0f172a]/70
+to-[#020617]/80 px-6 py-20 md:py-24"
+      >
         <div className="mx-auto max-w-6xl">
           {/* HERO */}
           <section className="text-center">
-            <p className="text-sm uppercase tracking-[0.3em] text-purple-300">
+            <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">
               BITS&BYTES NOIDA
             </p>
 
             <h1 className="mt-6 text-5xl font-bold uppercase leading-[0.9] text-white md:text-7xl">
               BUILD
               <br />
-              <span className="bg-gradient-to-r from-purple-400 to-fuchsia-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
                 WITH US.
               </span>
             </h1>
@@ -39,7 +43,7 @@ export default function Join() {
 
           {/* WHO SHOULD APPLY */}
           <section className="mt-28">
-            <h2 className="text-center text-sm uppercase tracking-[0.25em] text-purple-300">
+            <h2 className="text-center text-sm uppercase tracking-[0.25em] text-cyan-300">
               WHO SHOULD APPLY
             </h2>
 
@@ -47,7 +51,7 @@ export default function Join() {
               {builderTypes.map((type) => (
                 <div
                   key={type.title}
-                  className="rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-6 backdrop-blur"
+                  className="rounded-2xl border border-blue-500/20 bg-[#0c0815]/60 p-6 backdrop-blur"
                 >
                   <h3 className="text-lg font-semibold text-white">
                     {type.title}
@@ -61,7 +65,7 @@ export default function Join() {
             </div>
           </section>
           <section className="mt-28">
-            <h2 className="text-center text-sm uppercase tracking-[0.25em] text-purple-300">
+            <h2 className="text-center text-sm uppercase tracking-[0.25em] text-cyan-300">
               NOT FOR YOU IF
             </h2>
 
@@ -94,7 +98,7 @@ export default function Join() {
 
           {/* PROCESS */}
           <section className="mt-28">
-            <h2 className="text-center text-sm uppercase tracking-[0.25em] text-purple-300">
+            <h2 className="text-center text-sm uppercase tracking-[0.25em] text-cyan-300">
               HOW IT WORKS
             </h2>
 
@@ -102,9 +106,9 @@ export default function Join() {
               {joinSteps.map((step) => (
                 <div
                   key={step.number}
-                  className="rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-8"
+                  className="rounded-2xl border border-blue-500/20 bg-[#0c0815]/60 p-8"
                 >
-                  <p className="text-4xl font-bold text-purple-400">
+                  <p className="text-4xl font-bold text-cyan-400">
                     {step.number}
                   </p>
 
@@ -120,7 +124,7 @@ export default function Join() {
             </div>
           </section>
           <section className="mt-24">
-            <div className="rounded-3xl border border-purple-500/20 bg-[#0c0815]/60 p-10 text-center">
+            <div className="rounded-3xl border border-blue-500/20 bg-[#0c0815]/60 p-10 text-center">
               <h2 className="text-3xl font-bold text-white">
                 MEET THE COMMUNITY FIRST.
               </h2>
@@ -137,11 +141,11 @@ export default function Join() {
           </section>
           {/* FINAL CTA */}
           <section className="mt-28 text-center">
-            <div className="rounded-3xl border border-purple-500/20 bg-[#0c0815]/60 p-10 md:p-16">
+            <div className="rounded-3xl border border-blue-500/20 bg-[#0c0815]/60 p-10 md:p-16">
               <h2 className="text-4xl font-bold uppercase text-white md:text-6xl">
                 DON'T WAIT FOR
                 <br />
-                <span className="bg-gradient-to-r from-purple-400 to-fuchsia-300 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
                   PERMISSION.
                 </span>
                 <br />

@@ -55,8 +55,8 @@ export default function HomeTerminal() {
   }, [currentSet]);
 
   return (
-    <div className="mx-auto w-full max-w-md overflow-hidden rounded-2xl border border-purple-500/20 bg-black/60 backdrop-blur lg:max-w-lg">
-      <div className="flex items-center gap-2 border-b border-purple-500/20 px-4 py-3">
+    <div className="mx-auto w-full max-w-md overflow-hidden rounded-2xl border border-blue-500/20 bg-black/60 backdrop-blur lg:max-w-lg">
+      <div className="flex items-center gap-2 border-b border-blue-500/20 px-4 py-3">
         <div className="h-3 w-3 rounded-full bg-red-500" />
         <div className="h-3 w-3 rounded-full bg-yellow-500" />
         <div className="h-3 w-3 rounded-full bg-green-500" />
@@ -70,7 +70,7 @@ export default function HomeTerminal() {
               line.includes("✓")
                 ? "text-green-400"
                 : line.includes("$")
-                  ? "text-purple-300"
+                  ? "text-cyan-300"
                   : "text-zinc-400"
             }
           >

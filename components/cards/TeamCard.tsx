@@ -29,7 +29,7 @@ export default function TeamCard({
         }`}
       >
         {/* FRONT */}
-        <div className="absolute inset-0 overflow-hidden rounded-2xl border border-purple-500/20 bg-[#0c0815] [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
+        <div className="absolute inset-0 overflow-hidden rounded-2xl border border-blue-500/20 bg-[#0c0815] [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
           <div className="aspect-square overflow-hidden">
             <img
               src={member.image}
@@ -43,17 +43,17 @@ export default function TeamCard({
               {member.name}
             </h3>
 
-            <p className="mt-1 text-xs uppercase tracking-[0.2em] text-purple-300">
+            <p className="mt-1 text-xs uppercase tracking-[0.2em] text-cyan-300">
               {member.role}
             </p>
           </div>
         </div>
 
         {/* BACK */}
-        <div className="absolute inset-0 rounded-2xl border border-purple-500/30 bg-[#080510] p-6 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] [transform:rotateY(180deg)]">
+        <div className="absolute inset-0 rounded-2xl border border-blue-500/30 bg-[#080510] p-6 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] [transform:rotateY(180deg)]">
           <div className="flex h-full flex-col">
             <div>
-              <p className="font-mono text-xs text-purple-400">
+              <p className="font-mono text-xs text-cyan-400">
                 ROLE
               </p>
 
@@ -63,7 +63,7 @@ export default function TeamCard({
             </div>
 
             <div className="mt-6">
-              <p className="font-mono text-xs text-purple-400">
+              <p className="font-mono text-xs text-cyan-400">
                 MISSION
               </p>
 

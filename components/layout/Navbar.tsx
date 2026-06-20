@@ -30,7 +30,7 @@ export default function Navbar() {
     <nav
   className={`fixed top-0 left-0 right-0 z-60 transition-all duration-300 ${
     scrolled
-      ? "border-b border-purple-500/20 bg-black/50 backdrop-blur-xl"
+      ? "border-b border-blue-500/20 bg-black/50 backdrop-blur-xl"
       : "bg-transparent"
   }`}
 >
@@ -66,7 +66,7 @@ export default function Navbar() {
               {item.label}
 
               <span
-                className={`absolute -bottom-2 left-0 h-0.5 bg-purple-400 transition-all duration-300 ${
+                className={`absolute -bottom-2 left-0 h-0.5 bg-blue-400 transition-all duration-300 ${
                   pathname === item.href ? "w-full" : "w-0"
                 }`}
               />
@@ -110,7 +110,7 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: -20, scale: 0.95 }}
                   transition={{ duration: 0.25 }}
-                  className="absolute right-0 top-16 z-50 w-64 rounded-2xl border border-purple-500/20 bg-black/90 p-6 backdrop-blur-xl"
+                  className="absolute right-0 top-16 z-50 w-64 rounded-2xl border border-blue-500/20 bg-black/90 p-6 backdrop-blur-xl"
                 >
                   <div className="flex flex-col gap-5">
                     {primaryNavLinks.map((item) => (
@@ -127,15 +127,10 @@ export default function Navbar() {
                         {item.label}
                       </Link>
                     ))}
-
-                    
-
-                    
-
                     <Link
                       href="/join"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="mt-2 flex justify-center rounded-lg border border-purple-500/30 bg-purple-500/10 px-4 py-3 text-sm font-medium text-white transition-all duration-300 active:scale-95"
+                      className="mt-2 flex justify-center rounded-lg border border-blue-500/30 bg-blue-500/10 px-4 py-3 text-sm font-medium text-white transition-all duration-300 active:scale-95"
                     >
                       JOIN NOIDA →
                     </Link>

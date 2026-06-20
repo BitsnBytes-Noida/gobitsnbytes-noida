@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className=" min-h-screen bg-[#120a1f] font-sans text-[#f4efff] antialiased">
+      <body className="min-h-screen bg-[#020617] font-sans text-[#f8fafc] antialiased">
         <Navbar />
         <GridBackground />
         <Spotlight />
