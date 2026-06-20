@@ -5,6 +5,9 @@ import { motion } from "framer-motion";
 import "../styles/globals.css";
 import Button from "@/components/ui/Button";
 import HomeTerminal from "@/components/sections/TerminalDemo";
+import ExploreSection from "@/components/sections/ExploreSection";
+
+
 export default function Home() {
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -76,7 +79,10 @@ to-[#020617]/80 relative overflow-hidden px-5 py-16 sm:px-6 md:py-24 lg:py-32">
 
         {/* Right Side Terminal */}
         <HomeTerminal />
+
       </div>
+      <ExploreSection />
+
     </main>
   );
 }
