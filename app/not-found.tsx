@@ -1,62 +1,57 @@
-"use client";
-
 import Link from "next/link";
-import PageWrapper from "@/components/layout/PageWrapper";
+import Button from "@/components/ui/Button";
 
 export default function NotFound() {
   return (
-    <PageWrapper>
-      <main className="flex min-h-screen items-center justify-center px-6">
-        <div className="max-w-3xl text-center">
-          <p className="font-mono text-sm uppercase tracking-[0.3em] text-cyan-300">
+    <main className="relative min-h-screen bg-linear-to-b from-[#020617]/80 via-[#0f172a]/70 to-[#020617]/80 px-6 py-24">
+      <div className="mx-auto flex min-h-[80vh] max-w-6xl items-center justify-center">
+        <div className="w-full max-w-4xl text-center">
+          <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">
             ERROR 404
           </p>
-          <h1 className="mt-6 text-6xl font-bold uppercase leading-none text-white md:text-8xl">
+
+          <h1 className="mt-6 text-6xl font-bold uppercase leading-[0.9] text-white md:text-8xl">
             PAGE
             <br />
-            <span className="bg-gradient-to-r from-purple-400 to-fuchsia-300 bg-clip-text text-transparent">
-              NOT FOUND
+            <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+              NOT FOUND.
             </span>
           </h1>
 
-          <div className="mx-auto mt-10 max-w-xl overflow-hidden rounded-2xl border border-blue-500/20 bg-black/60 text-left backdrop-blur">
+          <p className="mx-auto mt-8 max-w-2xl text-lg text-zinc-400">
+            Looks like this route hasn't been built yet.
+          </p>
+
+          {/* Terminal */}
+          <div className="mx-auto mt-12 max-w-2xl overflow-hidden rounded-2xl border border-blue-500/20 bg-black/60 text-left backdrop-blur">
             <div className="flex items-center gap-2 border-b border-blue-500/20 px-4 py-3">
               <div className="h-3 w-3 rounded-full bg-red-500" />
               <div className="h-3 w-3 rounded-full bg-yellow-500" />
               <div className="h-3 w-3 rounded-full bg-green-500" />
             </div>
 
-            <div className="space-y-2 p-6 font-mono text-sm">
-              <p className="text-cyan-300">
-                bits@noida:~$ open page
-              </p>
+            <div className="p-6 font-mono text-sm">
+              <p className="text-cyan-300">bits@noida:~$ open /unknown-route</p>
 
-              <p className="text-zinc-400">
-                &gt; locating route...
-              </p>
+              <p className="mt-2 text-red-400">Error: route not found</p>
 
-              <p className="text-zinc-400">
-                &gt; checking deployment...
-              </p>
-
-              <p className="text-red-400">
-                ✕ route not found
-              </p>
-
-              <p className="text-zinc-500">
+              <p className="mt-2 text-zinc-400">
                 The page you're looking for doesn't exist.
               </p>
+
+              <p className="mt-4 text-green-400">✓ try another path</p>
             </div>
           </div>
 
-          <Link
-            href="/"
-            className="mt-10 inline-flex items-center gap-2 rounded-xl border border-blue-500/30 bg-purple-500/10 px-8 py-4 text-sm font-medium uppercase tracking-wider text-white transition-all duration-300 hover:scale-105 hover:border-purple-400 hover:shadow-[0_0_30px_rgba(168,85,247,0.35)] active:scale-95"
-          >
-            RETURN HOME →
-          </Link>
+          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+            <Button href="/">GO HOME →</Button>
+
+            <Button href="/join" variant="secondary">
+              JOIN NOIDA →
+            </Button>
+          </div>
         </div>
-      </main>
-    </PageWrapper>
+      </div>
+    </main>
   );
 }
