@@ -3,6 +3,7 @@
 import PageWrapper from "@/components/layout/PageWrapper";
 import Button from "@/components/ui/Button";
 import { socialLinks } from "@/data/socials";
+import { contactMethods } from "@/data/contact";
 
 export default function Contact() {
   return (
@@ -34,75 +35,31 @@ export default function Contact() {
           {/* Contact Cards */}
           <section className="mt-24">
             <div className="grid gap-6 md:grid-cols-3">
-              {/* Email */}
-              <a
-                href={`mailto:${socialLinks.email}`}
-                className="group rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-purple-400/40 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)]"
-              >
-                <p className="text-sm uppercase tracking-[0.2em] text-purple-300">
-                  Email
-                </p>
+              {contactMethods.map((method) => (
+                <a
+                  key={method.title}
+                  href={method.href}
+                  target={method.external ? "_blank" : undefined}
+                  rel={method.external ? "noreferrer" : undefined}
+                  className="group rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-purple-400/40 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)]"
+                >
+                  <p className="text-sm uppercase tracking-[0.2em] text-purple-300">
+                    {method.title}
+                  </p>
 
-                <h3 className="mt-4 text-xl font-semibold text-white">
-                  {socialLinks.email}
-                </h3>
+                  <h3 className="mt-4 text-xl font-semibold text-white">
+                    {method.heading}
+                  </h3>
 
-                <p className="mt-4 text-sm text-zinc-400">
-                  Best for partnerships, collaborations and general inquiries.
-                </p>
+                  <p className="mt-4 text-sm text-zinc-400">
+                    {method.description}
+                  </p>
 
-                <div className="mt-8 text-purple-400 transition-transform duration-300 group-hover:translate-x-2">
-                  →
-                </div>
-              </a>
-
-              {/* Discord */}
-              <a
-                href={socialLinks.discord}
-                target="_blank"
-                rel="noreferrer"
-                className="group rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-purple-400/40 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)]"
-              >
-                <p className="text-sm uppercase tracking-[0.2em] text-purple-300">
-                  Discord
-                </p>
-
-                <h3 className="mt-4 text-xl font-semibold text-white">
-                  Join the Community
-                </h3>
-
-                <p className="mt-4 text-sm text-zinc-400">
-                  Meet builders, share ideas and stay updated.
-                </p>
-
-                <div className="mt-8 text-purple-400 transition-transform duration-300 group-hover:translate-x-2">
-                  →
-                </div>
-              </a>
-
-              {/* Instagram */}
-              <a
-                href={socialLinks.instagram}
-                target="_blank"
-                rel="noreferrer"
-                className="group rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-purple-400/40 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)]"
-              >
-                <p className="text-sm uppercase tracking-[0.2em] text-purple-300">
-                  Instagram
-                </p>
-
-                <h3 className="mt-4 text-xl font-semibold text-white">
-                  @gobitsnbytes.noida
-                </h3>
-
-                <p className="mt-4 text-sm text-zinc-400">
-                  Updates, announcements and community highlights.
-                </p>
-
-                <div className="mt-8 text-purple-400 transition-transform duration-300 group-hover:translate-x-2">
-                  →
-                </div>
-              </a>
+                  <div className="mt-8 text-purple-400 transition-transform duration-300 group-hover:translate-x-2">
+                    →
+                  </div>
+                </a>
+              ))}
             </div>
           </section>
 
