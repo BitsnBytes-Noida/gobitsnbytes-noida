@@ -2,6 +2,7 @@
 
 import PageWrapper from "@/components/layout/PageWrapper";
 import Button from "@/components/ui/Button";
+import { builderTypes, joinSteps } from "@/data/join";
 
 const FORM_URL = "https://forms.gle/SSAbJfczyuJLswPL8";
 const DISCORD_URL = "https://discord.gg/u9Dkntjdy";
@@ -43,37 +44,20 @@ export default function Join() {
             </h2>
 
             <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-              <div className="rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-6 backdrop-blur">
-                <h3 className="text-lg font-semibold text-white">BUILDERS</h3>
+              {builderTypes.map((type) => (
+                <div
+                  key={type.title}
+                  className="rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-6 backdrop-blur"
+                >
+                  <h3 className="text-lg font-semibold text-white">
+                    {type.title}
+                  </h3>
 
-                <p className="mt-3 text-sm text-zinc-400">
-                  Apps, AI tools, websites, open-source projects, experiments.
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-6 backdrop-blur">
-                <h3 className="text-lg font-semibold text-white">DESIGNERS</h3>
-
-                <p className="mt-3 text-sm text-zinc-400">
-                  UI/UX, branding, graphics, motion design and visual systems.
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-6 backdrop-blur">
-                <h3 className="text-lg font-semibold text-white">DEVELOPERS</h3>
-
-                <p className="mt-3 text-sm text-zinc-400">
-                  Frontend, backend, AI, automation, product engineering.
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-6 backdrop-blur">
-                <h3 className="text-lg font-semibold text-white">FOUNDERS</h3>
-
-                <p className="mt-3 text-sm text-zinc-400">
-                  Startup builders, community leaders and ambitious creators.
-                </p>
-              </div>
+                  <p className="mt-3 text-sm text-zinc-400">
+                    {type.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </section>
           <section className="mt-28">
@@ -115,41 +99,24 @@ export default function Join() {
             </h2>
 
             <div className="mt-10 grid gap-6 md:grid-cols-3">
-              <div className="rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-8">
-                <p className="text-4xl font-bold text-purple-400">01</p>
+              {joinSteps.map((step) => (
+                <div
+                  key={step.number}
+                  className="rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-8"
+                >
+                  <p className="text-4xl font-bold text-purple-400">
+                    {step.number}
+                  </p>
 
-                <h3 className="mt-4 text-xl font-semibold text-white">
-                  Submit Application
-                </h3>
+                  <h3 className="mt-4 text-xl font-semibold text-white">
+                    {step.title}
+                  </h3>
 
-                <p className="mt-2 text-sm text-zinc-400">
-                  Tell us what you're building or what you want to build.
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-8">
-                <p className="text-4xl font-bold text-purple-400">02</p>
-
-                <h3 className="mt-4 text-xl font-semibold text-white">
-                  Builder Review
-                </h3>
-
-                <p className="mt-2 text-sm text-zinc-400">
-                  We'll connect with you and learn more about your interests.
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-purple-500/20 bg-[#0c0815]/60 p-8">
-                <p className="text-4xl font-bold text-purple-400">03</p>
-
-                <h3 className="mt-4 text-xl font-semibold text-white">
-                  Access Granted
-                </h3>
-
-                <p className="mt-2 text-sm text-zinc-400">
-                  Join events, collaborate on projects and ship things publicly.
-                </p>
-              </div>
+                  <p className="mt-2 text-sm text-zinc-400">
+                    {step.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </section>
           <section className="mt-24">
