@@ -27,9 +27,9 @@ export default function ExploreSection() {
         {/* Right Cards */}
         <div className="grid w-full gap-6 md:grid-cols-2">
           {exploreLinks.map((item, index) => (
-            <TiltCard>
+            <TiltCard key={item.title}>
               <Link
-                key={item.title}
+                
                 href={item.href}
                 target={item.external ? "_blank" : undefined}
                 rel={item.external ? "noreferrer" : undefined}

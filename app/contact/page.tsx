@@ -43,7 +43,7 @@ to-[#020617]/80 z-10 min-h-screen px-6 py-20 md:py-24">
                   href={method.href}
                   target={method.external ? "_blank" : undefined}
                   rel={method.external ? "noreferrer" : undefined}
-                  className="group rounded-2xl border border-blue-500/20 bg-[#0c0815]/60 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-purple-400/40 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)]"
+                  className="group rounded-2xl border border-blue-500/20 bg-[#0c0815]/60 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-blue-400/40 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)]"
                 >
                   <p className="text-sm uppercase tracking-[0.2em] text-cyan-300">
                     {method.title}

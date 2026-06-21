@@ -4,6 +4,7 @@ import "../../styles/globals.css";
 import { useState } from "react";
 import { noidaCore, contributors, founders } from "@/data/team";
 import TeamCard from "@/components/cards/TeamCard";
+import ContributorAvatar from "@/components/cards/ContributorAvatar";
 
 export default function About() {
   const [activeCard, setActiveCard] = useState<string | null>(null);
@@ -36,20 +37,40 @@ export default function About() {
               innovate. collaborate. hack.
             </p>
           </section>
-          <section className="relative mt-14">
+          <section className="relative mt-20 border-t border-cyan-500/10 pt-14">
             <h2 className="text-xs font-medium uppercase tracking-[0.18em] text-[#9a9a9a]">
               NOIDA CORE
             </h2>
-            <div className="absolute left-1/2 top-0 h-64 w-64 -translate-x-1/2 rounded-full bg-cyan-500/20 blur-3xl" />
-            <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-              {noidaCore.map((member) => (
+
+            {/* Lead */}
+            <div className="mt-10 flex justify-center">
+              <div className="w-full max-w-xs">
+                <TeamCard
+                  member={noidaCore[0]}
+                  active={activeCard === noidaCore[0].name}
+                  onClick={() =>
+                    setActiveCard(
+                      activeCard === noidaCore[0].name
+                        ? null
+                        : noidaCore[0].name,
+                    )
+                  }
+                />
+              </div>
+            </div>
+
+            {/* Core Team */}
+            <div className="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
+              {noidaCore.slice(1).map((member) => (
                 <TeamCard
                   key={member.name}
                   member={member}
                   active={activeCard === member.name}
                   onClick={() =>
                     setActiveCard(
-                      activeCard === member.name ? null : member.name,
+                      activeCard === member.name
+                        ? null
+                        : member.name,
                     )
                   }
                 />
@@ -65,17 +86,11 @@ export default function About() {
               Builders helping shape and grow the Bits&Bytes Noida community.
             </p>
 
-            <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+            <div className="mt-6 grid grid-cols-2 lg:grid-cols-4 justify-center gap-16">
               {contributors.map((member) => (
-                <TeamCard
+                <ContributorAvatar
                   key={member.name}
                   member={member}
-                  active={activeCard === member.name}
-                  onClick={() =>
-                    setActiveCard(
-                      activeCard === member.name ? null : member.name,
-                    )
-                  }
                 />
               ))}
             </div>

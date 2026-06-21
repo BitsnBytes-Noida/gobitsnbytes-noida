@@ -22,11 +22,10 @@ export default function TeamCard({
       className="group w-full cursor-pointer [perspective:1000px]"
     >
       <div
-        className={`relative h-[340px] w-full rounded-2xl transition-all duration-700 [transform-style:preserve-3d] sm:h-[360px] ${
-          active
+        className={`relative min-h-[430px] w-full rounded-2xl transition-all duration-700 [transform-style:preserve-3d] ${active
             ? "[transform:rotateY(180deg)]"
             : "md:group-hover:[transform:rotateY(180deg)]"
-        }`}
+          }`}
       >
         {/* FRONT */}
         <div className="absolute inset-0 overflow-hidden rounded-2xl border border-blue-500/20 bg-[#0c0815] [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
