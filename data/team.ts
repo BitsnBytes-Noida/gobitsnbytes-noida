@@ -2,74 +2,74 @@ export const noidaCore = [
     {
       name: "Aryan Chauhan",
       role: "Lead",
-      image: "/team/aryan.png",
+      image: "/team/CoreTeam/aryan.png",
       bio: "Building the backbone of Bits&Bytes Noida.",
     },
     {
       name: "Tanish Garg",
       role: "Tech Lead",
-      image: "/team/tanish.jpg",
+      image: "/team/CoreTeam/tanish.jpg",
       bio: "Leading the development of our digital platforms.",
     },
     {
       name: "Nisha Rawat",
       role: "Operations Head",
-      image: "/team/nisha.png",
+      image: "/team/CoreTeam/nisha.png",
       bio: "Ensuring events and operations run smoothly.",
     },
     {
       name: "Disha Yadav",
       role: "Creative & Design Head",
-      image: "/team/disha.png",
+      image: "/team/CoreTeam/disha.png",
       bio: "Crafting the visual identity of the community.",
     },
     {
       name: "Benny Vijay Daniel",
       role: "Sponsorship Head",
-      image: "/team/benny.png",
+      image: "/team/CoreTeam/benny.png",
       bio: "Building partnerships and sponsorships.",
     },
   ];
 export const contributors = [
+  {
+    name: "Shubham Kaushik",
+    role: "Contributor",
+    image: "/team/Contributors/shubham.jpg",
+    bio: "Contributing to the growth and development of Bits&Bytes Noida.",
+  },
     {
       name: "Rashita Yadav",
       role: "Contributor",
-      image: "/team/rashita.jpg",
+      image: "/team/Contributors/rashita.jpg",
       bio: "Actively contributing to projects and community growth.",
     },
     {
       name: "Nikita Yadav",
       role: "Contributor",
-      image: "/team/nikita.jpg",
+      image: "/team/Contributors/nikita.jpg",
       bio: "Supporting community initiatives and builder programs.",
     },
     {
       name: "Prasiddhi Sai",
       role: "Contributor",
-      image: "/team/prasiddhi.jpg",
+      image: "/team/Contributors/prasiddhi.jpg",
       bio: "Helping create opportunities and experiences for builders.",
-    },
-    {
-      name: "Shubham Kaushik",
-      role: "Contributor",
-      image: "/team/shubham.jpg",
-      bio: "Contributing to the growth and development of Bits&Bytes Noida.",
     },
   ];
 export const founders = [
     {
       name: "Yash Singh",
       role: "Co-Founder & Organisation Lead",
-      image: "/team/yash.jpeg",
+      image: "/team/Founders/yash.jpeg",
     },
     {
       name: "Aadrika Maurya",
       role: "Co-Founder & Chief Creative Strategist",
-      image: "/team/aadrika.png",
+      image: "/team/Founders/aadrika.png",
     },
     {
       name: "Akshat Kushwaha",
       role: "Co-Founder & Technical Lead",
-      image: "/team/akshat.jpg",
+      image: "/team/Founders/akshat.jpg",
     },
   ];
