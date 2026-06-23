@@ -7,8 +7,8 @@ export default function CoreTeamOrbit() {
   const members = noidaCore.slice(1);
 
   return (
-    <div className="mx-auto mt-12 max-w-6xl">
-      <div className="rounded-[40px] border border-cyan-500/20 bg-[#081225]/40 p-8 md:p-12">
+    <div className="mx-auto mt-12 max-w-5xl">
+      <div className="rounded-[40px] border border-cyan-500/20 bg-[#081225]/40 p-6 md:p-10">
 
         <div className="flex flex-col items-center">
 
@@ -18,7 +18,7 @@ export default function CoreTeamOrbit() {
               <img
                 src={lead.image}
                 alt={lead.name}
-                className="h-40 w-40 object-cover md:h-48 md:w-48"
+                className="h-36 w-36 object-cover md:h-44 md:w-44"
               />
             </div>
 
@@ -32,10 +32,10 @@ export default function CoreTeamOrbit() {
           </div>
 
           {/* CONNECTION LINE */}
-          <div className="mt-8 h-16 w-px bg-cyan-500/20" />
+          <div className="mt-4 h-8 w-px bg-cyan-500/20" />
 
           {/* MEMBERS */}
-          <div className="grid w-full max-w-4xl grid-cols-2 gap-x-8 gap-y-10 md:gap-x-16 md:gap-y-14">
+          <div className="grid w-full max-w-3xl grid-cols-2 gap-x-6 gap-y-8 md:gap-x-12 md:gap-y-10">
 
             {members.map((member) => (
               <div
@@ -46,7 +46,7 @@ export default function CoreTeamOrbit() {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="h-28 w-28 object-cover transition-transform duration-500 group-hover:scale-105 md:h-32 md:w-32"
+                    className="h-36 w-36 object-cover md:h-40 md:w-40 transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
 
