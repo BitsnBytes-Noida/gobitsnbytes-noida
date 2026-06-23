@@ -1,3 +1,5 @@
+"use client";
+
 import { noidaCore } from "@/data/team";
 
 export default function CoreTeamOrbit() {
@@ -5,53 +7,50 @@ export default function CoreTeamOrbit() {
   const members = noidaCore.slice(1);
 
   return (
-    <div className="mx-auto mt-12 max-w-7xl">
-      <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] grid-cols-1">
+    <div className="mx-auto mt-12 max-w-6xl">
+      <div className="rounded-[40px] border border-cyan-500/20 bg-[#081225]/40 p-8 md:p-12">
 
-        {/* TEAM LEAD */}
-        <div className="group relative overflow-hidden rounded-[32px] border border-cyan-500/20 bg-[#081225]/40">
-          <img
-            src={lead.image}
-            alt={lead.name}
-            className="h-[400px] md:h-[500px] lg:h-[620px] w-full object-cover"
-          />
+        <div className="flex flex-col items-center">
 
-          <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-[#020617]/20 to-transparent" />
-
-          <div className="absolute bottom-8 left-8 z-10">
-            <div className="inline-flex rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-1 backdrop-blur-sm">
-              <span className="text-xs uppercase tracking-[0.2em] text-cyan-300">
-                Fork Lead
-              </span>
+          {/* LEAD */}
+          <div className="group flex flex-col items-center">
+            <div className="overflow-hidden rounded-full border-4 border-cyan-400 shadow-[0_0_50px_rgba(34,211,238,0.25)]">
+              <img
+                src={lead.image}
+                alt={lead.name}
+                className="h-40 w-40 object-cover md:h-48 md:w-48"
+              />
             </div>
 
-            <h2 className="mt-4 text-3xl md:text-4xl font-bold text-white">
+            <h2 className="mt-5 text-3xl font-bold text-white">
               {lead.name}
             </h2>
 
-            <p className="mt-2 text-cyan-300">
+            <p className="mt-1 text-sm uppercase tracking-[0.2em] text-cyan-300">
               {lead.role}
             </p>
           </div>
-        </div>
 
-        {/* CORE TEAM */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {members.map((member) => (
-            <div
-              key={member.name}
-              className="group relative overflow-hidden rounded-[24px] border border-cyan-500/20 bg-[#081225]/40"
-            >
-              <img
-                src={member.image}
-                alt={member.name}
-                className="h-[260px] md:h-[300px] w-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
+          {/* CONNECTION LINE */}
+          <div className="mt-8 h-16 w-px bg-cyan-500/20" />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/95 via-transparent to-transparent" />
+          {/* MEMBERS */}
+          <div className="grid w-full max-w-4xl grid-cols-2 gap-x-8 gap-y-10 md:gap-x-16 md:gap-y-14">
 
-              <div className="absolute bottom-5 left-5">
-                <h3 className="text-xl md:text-2xl font-semibold text-white">
+            {members.map((member) => (
+              <div
+                key={member.name}
+                className="group flex flex-col items-center text-center"
+              >
+                <div className="overflow-hidden rounded-full border border-cyan-500/20 transition-all duration-300 group-hover:border-cyan-400 group-hover:shadow-[0_0_30px_rgba(34,211,238,0.2)]">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="h-28 w-28 object-cover transition-transform duration-500 group-hover:scale-105 md:h-32 md:w-32"
+                  />
+                </div>
+
+                <h3 className="mt-4 text-lg font-semibold text-white">
                   {member.name}
                 </h3>
 
@@ -59,10 +58,10 @@ export default function CoreTeamOrbit() {
                   {member.role}
                 </p>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
+        </div>
       </div>
     </div>
   );
