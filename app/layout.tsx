@@ -4,6 +4,7 @@ import Spotlight from "@/components/effects/Spotlight";
 import GridBackground from "@/components/effects/GridBackground";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ClientLayout from "@/components/layout/ClientLayout";
 export const metadata: Metadata = {
   title: "Bits&Bytes Noida",
   description:
@@ -19,11 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-[#020617] font-sans text-[#f8fafc] antialiased">
-        <Navbar />
-        <GridBackground />
-        <Spotlight />
-        <main>{children}</main>
-        <Footer />
+        <ClientLayout>
+          {children}
+        </ClientLayout>
       </body>
     </html>
   );
