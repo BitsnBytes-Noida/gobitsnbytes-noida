@@ -98,6 +98,153 @@ to-[#020617]/80 z-10 min-h-screen px-6 py-20 md:py-24">
               </Button>
             </div>
           </section>
+          <section className="mt-24 border-t border-cyan-500/10 pt-16">
+            <div className="mx-auto max-w-3xl">
+
+              <div className="text-center">
+                <p className="text-xs uppercase tracking-[0.25em] text-cyan-300">
+                  CONTACT
+                </p>
+
+                <h2 className="mt-4 text-4xl font-bold text-white md:text-5xl">
+                  Let's Build Something.
+                </h2>
+
+                <p className="mt-4 text-zinc-400">
+                  Have an idea, a question, or want to collaborate with Bits&Bytes
+                  Noida? We'd love to hear from you.
+                </p>
+              </div>
+
+              <form className="mt-12 space-y-6">
+
+                <div>
+                  <label className="mb-2 block text-sm text-zinc-400">
+                    Name
+                  </label>
+
+                  <input
+                    type="text"
+                    placeholder="Your name"
+                    className="
+            w-full
+            rounded-2xl
+            border
+            border-cyan-500/20
+            bg-[#081225]/40
+            px-5
+            py-4
+            text-white
+            outline-none
+            transition-all
+            duration-300
+            focus:border-cyan-400
+            focus:shadow-[0_0_20px_rgba(34,211,238,0.15)]
+          "
+                  />
+                </div>
+
+                <div>
+                  <label className="mb-2 block text-sm text-zinc-400">
+                    Email
+                  </label>
+
+                  <input
+                    type="email"
+                    placeholder="you@example.com"
+                    className="
+            w-full
+            rounded-2xl
+            border
+            border-cyan-500/20
+            bg-[#081225]/40
+            px-5
+            py-4
+            text-white
+            outline-none
+            transition-all
+            duration-300
+            focus:border-cyan-400
+            focus:shadow-[0_0_20px_rgba(34,211,238,0.15)]
+          "
+                  />
+                </div>
+
+                <div>
+                  <label className="mb-2 block text-sm text-zinc-400">
+                    Subject
+                  </label>
+
+                  <input
+                    type="text"
+                    placeholder="What's this about?"
+                    className="
+            w-full
+            rounded-2xl
+            border
+            border-cyan-500/20
+            bg-[#081225]/40
+            px-5
+            py-4
+            text-white
+            outline-none
+            transition-all
+            duration-300
+            focus:border-cyan-400
+            focus:shadow-[0_0_20px_rgba(34,211,238,0.15)]
+          "
+                  />
+                </div>
+
+                <div>
+                  <label className="mb-2 block text-sm text-zinc-400">
+                    Message
+                  </label>
+
+                  <textarea
+                    rows={6}
+                    placeholder="Tell us about your idea..."
+                    className="
+            w-full
+            resize-none
+            rounded-2xl
+            border
+            border-cyan-500/20
+            bg-[#081225]/40
+            px-5
+            py-4
+            text-white
+            outline-none
+            transition-all
+            duration-300
+            focus:border-cyan-400
+            focus:shadow-[0_0_20px_rgba(34,211,238,0.15)]
+          "
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="
+          w-full
+          rounded-2xl
+          bg-cyan-500
+          px-6
+          py-4
+          font-semibold
+          text-black
+          transition-all
+          duration-300
+          hover:scale-[1.02]
+          hover:shadow-[0_0_30px_rgba(34,211,238,0.35)]
+        "
+                >
+                  Send Message →
+                </button>
+
+              </form>
+            </div>
+          </section>
         </div>
       </main>
     </PageWrapper>
