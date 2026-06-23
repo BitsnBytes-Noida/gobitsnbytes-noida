@@ -18,7 +18,7 @@ export default function CoreTeamOrbit() {
               <img
                 src={lead.image}
                 alt={lead.name}
-                className="h-36 w-36 object-cover md:h-44 md:w-44"
+                className="h-44 w-44 object-cover md:h-52 md:w-52"
               />
             </div>
 
@@ -46,7 +46,7 @@ export default function CoreTeamOrbit() {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="h-36 w-36 object-cover md:h-40 md:w-40 transition-transform duration-500 group-hover:scale-105"
+                    className="h-44 w-44 object-cover md:h-52 md:w-52 transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
 
