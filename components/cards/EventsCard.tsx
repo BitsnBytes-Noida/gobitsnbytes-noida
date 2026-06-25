@@ -1,8 +1,11 @@
+import Link from "next/dist/client/link";
+
 type EventCardProps = {
   title: string;
   date: string;
   description: string;
   image: string;
+  href: string;
 };
 
 export default function EventCard({
@@ -10,21 +13,25 @@ export default function EventCard({
   date,
   description,
   image,
+  href,
 }: EventCardProps) {
   return (
-    <div
+    <Link
+      href={href}
       className="
-        group
-        overflow-hidden
-        rounded-[24px]
-        border
-        border-cyan-500/20
-        bg-[#081225]/40
-        transition-all
-        duration-500
-        hover:-translate-y-2
-        hover:border-cyan-400/50
-      "
+    group
+    block
+    overflow-hidden
+    rounded-[24px]
+    border
+    border-cyan-500/20
+    bg-[#081225]/40
+    transition-all
+    duration-500
+    hover:-translate-y-2
+    hover:border-cyan-400/50
+    hover:shadow-[0_0_40px_rgba(34,211,238,0.15)]
+  "
     >
       <div className="overflow-hidden">
         <img
@@ -53,7 +60,16 @@ export default function EventCard({
         <p className="mt-3 text-sm leading-relaxed text-zinc-400">
           {description}
         </p>
+        <div className="mt-5 flex items-center justify-between">
+  <span className="text-sm text-cyan-300">
+    Explore Event
+  </span>
+
+  <span className="transition-transform duration-300 group-hover:translate-x-1">
+    →
+  </span>
+</div>
       </div>
-    </div>
+    </Link>
   );
 }

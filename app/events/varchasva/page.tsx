@@ -1,3 +1,6 @@
+'use client';
+import { ChevronDown } from "lucide-react";
+import { useState } from "react";
 export default function VarchasvaPage() {
   const galleryImages = [
     "/events/varchasva/1.jpg",
@@ -6,6 +9,33 @@ export default function VarchasvaPage() {
     "/events/varchasva/4.jpg",
     "/events/varchasva/5.jpg",
     "/events/varchasva/6.jpg",
+  ];
+  const faqs = [
+    {
+      question: "Is there a registration fee?",
+      answer:
+        "No. Participation in Varchasva is completely free. There are no registration charges for any eligible participant.",
+    },
+    {
+      question: "Can I participate individually?",
+      answer:
+        "No. Individual participation is not allowed. Every participant must register as part of a team. Team formation guidelines and the maximum team size will be shared in the official rulebook.",
+    },
+    {
+      question: "Do I need a prototype?",
+      answer:
+        "No. A working prototype is not required during registration. However, teams are encouraged to develop and present a prototype during the ideathon to better demonstrate their solution.",
+    },
+    {
+      question: "Can school students participate?",
+      answer:
+        "Yes. Varchasva welcomes school students who are passionate about innovation and problem-solving, subject to the eligibility criteria announced by the organizers.",
+    },
+    {
+      question: "How many members per team?",
+      answer:
+        "Teams can have up to 4 members. Working in teams allows participants to combine diverse skills and build stronger solutions.",
+    },
   ];
   return (
 
@@ -17,7 +47,7 @@ export default function VarchasvaPage() {
       <section className="relative z-10 min-h-screen bg-gradient-to-b from-[#020617]/80 via-[#0f172a]/70 to-[#020617]/80">
 
         {/* HERO */}
-        <section className="px-6 py-32">
+        <section className="px-6 py-28 md:py-36">
           <div className="mx-auto max-w-7xl text-center">
 
             <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">
@@ -41,19 +71,56 @@ export default function VarchasvaPage() {
                 Event Brochure
               </button>
             </div>
+            <div className="mt-16 flex justify-center">
+              <a
+                href="#about"
+                className="
+      group
+      flex
+      flex-col
+      items-center
+      gap-2
+      text-zinc-400
+      transition-colors
+      duration-300
+      hover:text-cyan-300
+    "
+              >
+                <span className="text-xs uppercase tracking-[0.3em]">
+                  Scroll to Explore
+                </span>
+
+                <svg
+                  className="h-7 w-7 animate-bounce transition-transform duration-300 group-hover:translate-y-1"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 5v14m0 0-6-6m6 6 6-6"
+                  />
+                </svg>
+              </a>
+            </div>
 
           </div>
         </section>
 
         {/* ABOUT */}
-        <section className="px-6 py-24">
-  <div className="mx-auto max-w-7xl">
+        <section
+          id="about"
+          className="px-6 py-16 md:py-20"
+        >
+          <div className="mx-auto max-w-7xl">
 
-    <div className="grid items-center gap-10 lg:grid-cols-[0.35fr_0.65fr]">
+            <div className="grid items-center gap-10 lg:grid-cols-[0.35fr_0.65fr]">
 
-      {/* POSTER */}
-      <div
-        className="
+              {/* POSTER */}
+              <div
+                className="
           overflow-hidden
           rounded-[28px]
           border
@@ -65,73 +132,73 @@ export default function VarchasvaPage() {
           hover:border-cyan-400/40
           hover:shadow-[0_0_40px_rgba(34,211,238,0.15)]
         "
-      >
-        <img
-          src="/events/varchasva/poster.png"
-          alt="Varchasva Poster"
-          className="w-full rounded-[20px]"
-        />
-      </div>
+              >
+                <img
+                  src="/events/varchasva/poster.png"
+                  alt="Varchasva Poster"
+                  className="w-full rounded-[20px]"
+                />
+              </div>
 
-      {/* CONTENT */}
-      <div>
+              {/* CONTENT */}
+              <div>
 
-        <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">
-          THE IDEATHON
-        </p>
+                <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">
+                  THE IDEATHON
+                </p>
 
-        <h2 className="mt-3 text-4xl font-bold text-white md:text-5xl">
-          About Varchasva
-        </h2>
+                <h2 className="mt-3 text-4xl font-bold text-white md:text-5xl">
+                  About Varchasva
+                </h2>
 
-        <p className="mt-6 max-w-3xl leading-relaxed text-zinc-400">
-          Varchasva is a city-wide ideathon bringing together students,
-          developers, designers, innovators, and problem-solvers to
-          develop solutions for real-world challenges across education,
-          governance, sustainability, and technology.
-        </p>
+                <p className="mt-6 max-w-3xl leading-relaxed text-zinc-400">
+                  Varchasva is a city-wide ideathon bringing together students,
+                  developers, designers, innovators, and problem-solvers to
+                  develop solutions for real-world challenges across education,
+                  governance, sustainability, and technology.
+                </p>
 
-        <p className="mt-4 max-w-3xl leading-relaxed text-zinc-400">
-          More than just a competition, Varchasva is a platform where
-          ambitious minds collaborate, validate ideas, and transform
-          concepts into impactful solutions through innovation,
-          execution, and leadership.
-        </p>
+                <p className="mt-4 max-w-3xl leading-relaxed text-zinc-400">
+                  More than just a competition, Varchasva is a platform where
+                  ambitious minds collaborate, validate ideas, and transform
+                  concepts into impactful solutions through innovation,
+                  execution, and leadership.
+                </p>
 
-        {/* HIGHLIGHT CHIPS */}
-        <div className="mt-8 flex flex-wrap gap-3">
+                {/* HIGHLIGHT CHIPS */}
+                <div className="mt-8 flex flex-wrap gap-3">
 
-          <span className="rounded-full border border-cyan-500/20 bg-cyan-500/5 px-4 py-2 text-sm text-cyan-300">
-            Innovation
-          </span>
+                  <span className="rounded-full border border-cyan-500/20 bg-cyan-500/5 px-4 py-2 text-sm text-cyan-300">
+                    Innovation
+                  </span>
 
-          <span className="rounded-full border border-cyan-500/20 bg-cyan-500/5 px-4 py-2 text-sm text-cyan-300">
-            Execution
-          </span>
+                  <span className="rounded-full border border-cyan-500/20 bg-cyan-500/5 px-4 py-2 text-sm text-cyan-300">
+                    Execution
+                  </span>
 
-          <span className="rounded-full border border-cyan-500/20 bg-cyan-500/5 px-4 py-2 text-sm text-cyan-300">
-            Problem Solving
-          </span>
+                  <span className="rounded-full border border-cyan-500/20 bg-cyan-500/5 px-4 py-2 text-sm text-cyan-300">
+                    Problem Solving
+                  </span>
 
-          <span className="rounded-full border border-cyan-500/20 bg-cyan-500/5 px-4 py-2 text-sm text-cyan-300">
-            Leadership
-          </span>
+                  <span className="rounded-full border border-cyan-500/20 bg-cyan-500/5 px-4 py-2 text-sm text-cyan-300">
+                    Leadership
+                  </span>
 
-          <span className="rounded-full border border-cyan-500/20 bg-cyan-500/5 px-4 py-2 text-sm text-cyan-300">
-            Dominance
-          </span>
+                  <span className="rounded-full border border-cyan-500/20 bg-cyan-500/5 px-4 py-2 text-sm text-cyan-300">
+                    Dominance
+                  </span>
 
-        </div>
+                </div>
 
-      </div>
+              </div>
 
-    </div>
+            </div>
 
-  </div>
-</section>
+          </div>
+        </section>
 
         {/* GALLERY */}
-        <section className="px-6 py-24">
+        <section className="px-6 py-16 md:py-20">
           <div className="mx-auto max-w-7xl">
 
             <p className="text-sm uppercase tracking-[0.25em] text-cyan-300">
@@ -246,10 +313,10 @@ export default function VarchasvaPage() {
           </div>
         </section>
         {/* EVENT DETAILS */}
-        <section className="px-6 py-24">
+        <section className="px-6 py-16 md:py-20">
           <div className="mx-auto max-w-7xl">
 
-            <h2 className="mb-10 text-4xl font-bold text-white">
+            <h2 className="mb-6 text-4xl font-bold text-white">
               Event Details
             </h2>
 
@@ -265,7 +332,7 @@ export default function VarchasvaPage() {
         </section>
 
         {/* TIMELINE */}
-        <section className="px-6 py-24">
+        <section className="px-6 py-16 md:py-20">
           <div className="mx-auto max-w-5xl">
 
             <h2 className="mb-12 text-center text-4xl font-bold text-white">
@@ -286,10 +353,10 @@ export default function VarchasvaPage() {
         </section>
 
         {/* THEMES */}
-        <section className="px-6 py-24">
+        <section className="px-6 py-16 md:py-20">
           <div className="mx-auto max-w-7xl">
 
-            <h2 className="mb-10 text-4xl font-bold text-white">
+            <h2 className="mb-6 text-4xl font-bold text-white">
               Themes
             </h2>
 
@@ -308,10 +375,10 @@ export default function VarchasvaPage() {
         </section>
 
         {/* PRIZES */}
-        <section className="px-6 py-24">
+        <section className="px-6 py-16 md:py-20">
           <div className="mx-auto max-w-7xl">
 
-            <h2 className="mb-10 text-4xl font-bold text-white">
+            <h2 className="mb-6 text-4xl font-bold text-white">
               Prizes
             </h2>
 
@@ -327,24 +394,34 @@ export default function VarchasvaPage() {
         </section>
 
         {/* FAQ */}
-        <section className="px-6 py-24">
-          <div className="mx-auto max-w-4xl">
+        <section className="px-6 py-16 md:py-20">
+          <div className="mx-auto max-w-5xl">
 
-            <h2 className="mb-10 text-center text-4xl font-bold text-white">
-              Frequently Asked Questions
+            <p className="text-center text-sm uppercase tracking-[0.3em] text-cyan-300">
+              FREQUENTLY ASKED QUESTIONS
+            </p>
+
+            <h2 className="mt-3 text-center text-4xl font-bold text-white md:text-5xl">
+              Everything You Need to Know
             </h2>
 
-            <div className="space-y-4">
-              <FaqItem question="Who can participate?" />
-              <FaqItem question="Is there a registration fee?" />
-              <FaqItem question="What is the team size?" />
+            <div className="mt-12 space-y-4">
+
+              {faqs.map((faq, index) => (
+                <FaqItem
+                  key={index}
+                  question={faq.question}
+                  answer={faq.answer}
+                />
+              ))}
+
             </div>
 
           </div>
         </section>
 
         {/* CTA */}
-        <section className="px-6 py-32">
+        <section className="px-6 py-28 md:py-36">
           <div className="mx-auto max-w-4xl rounded-[32px] border border-cyan-500/20 bg-[#081225]/40 p-12 text-center">
 
             <h2 className="text-5xl font-bold text-white">
@@ -404,10 +481,63 @@ function PrizeCard({ title }: { title: string }) {
   );
 }
 
-function FaqItem({ question }: { question: string }) {
+
+function FaqItem({
+  question,
+  answer,
+}: {
+  question: string;
+  answer: string;
+}) {
+  const [open, setOpen] = useState(false);
+
   return (
-    <div className="rounded-xl border border-cyan-500/20 bg-[#081225]/40 p-5 text-white">
-      {question}
+    <div
+      className={`
+    overflow-hidden
+    rounded-2xl
+    border
+    bg-[#081225]/40
+    transition-all
+    duration-300
+    ${open
+          ? "border-cyan-400 shadow-[0_0_25px_rgba(34,211,238,0.12)]"
+          : "border-cyan-500/20"
+        }
+  `}
+    >
+      <button
+        onClick={() => setOpen(!open)}
+        className="
+          flex
+          w-full
+          items-center
+          justify-between
+          px-6
+          py-5
+          text-left
+        "
+      >
+        <span className="text-lg font-semibold text-white">
+          {question}
+        </span>
+
+        <ChevronDown
+          className={`h-5 w-5 text-cyan-300 transition-transform duration-300 ${open ? "rotate-180" : ""
+            }`}
+        />
+      </button>
+
+      <div
+        className={`grid transition-all duration-300 ${open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+          }`}
+      >
+        <div className="overflow-hidden">
+          <p className="px-6 pb-6 text-zinc-400">
+            {answer}
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

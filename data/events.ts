@@ -1,11 +1,11 @@
 export const upcomingEvents = [
   {
-    id: 1,
+    id: "varchasva",
     title: "Varchasva",
-    date: "24 July 2026",
-    description:
-      "Ideathon",
-    image: "/events/launch.jpg",
+    date: "Coming Soon",
+    description: "A city-wide ideathon where innovation meets execution.",
+    image: "/events/varchasva/poster.png",
+    href: "/events/varchasva",
   },
 ];
 
