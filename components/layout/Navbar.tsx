@@ -5,7 +5,8 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { primaryNavLinks } from "@/data/navigation";
-import Button from "../ui/Button";
+import Button from "../common/Button";
+
 
 export default function Navbar() {
   

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { exploreLinks } from "@/data/explore";
-import TiltCard from "../ui/TiltCard";
+import TiltCard from "../common/TiltCard";
+
 
 export default function ExploreSection() {
   return (

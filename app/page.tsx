@@ -3,9 +3,10 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "../styles/globals.css";
-import Button from "@/components/ui/Button";
-import HomeTerminal from "@/components/sections/TerminalDemo";
-import ExploreSection from "@/components/sections/ExploreSection";
+import Button from "@/components/common/Button";
+import HomeTerminal from "@/components/home/TerminalDemo";
+import ExploreSection from "@/components/home/ExploreSection";
+
 
 
 export default function Home() {

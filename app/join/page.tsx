@@ -1,7 +1,8 @@
 "use client";
 
-import PageWrapper from "@/components/layout/PageWrapper";
-import Button from "@/components/ui/Button";
+
+import Button from "@/components/common/Button";
+import PageWrapper from "@/components/effects/PageWrapper";
 import { builderTypes, joinSteps } from "@/data/join";
 
 const FORM_URL = "https://forms.gle/SSAbJfczyuJLswPL8";

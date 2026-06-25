@@ -1,5 +1,6 @@
 'use client';
-import PageWrapper from "@/components/layout/PageWrapper";
+
+import PageWrapper from "@/components/effects/PageWrapper";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 export default function VarchasvaPage() {

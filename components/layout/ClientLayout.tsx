@@ -5,7 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Spotlight from "@/components/effects/Spotlight";
 import GridBackground from "@/components/effects/GridBackground";
-import OpeningLoader from "./OpeningLoader";
+import OpeningLoader from "../animations/OpeningLoader";
 
 
 export default function ClientLayout({

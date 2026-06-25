@@ -1,11 +1,12 @@
 "use client";
-import PageWrapper from "@/components/layout/PageWrapper";
+
 import "../../styles/globals.css";
 import { useState } from "react";
 import { noidaCore, contributors, founders } from "@/data/team";
-import TeamCard from "@/components/cards/TeamCard";
-import ContributorAvatar from "@/components/cards/ContributorAvatar";
-import CoreTeamOrbit from "@/components/cards/CoreTeamOrbit";
+import PageWrapper from "@/components/effects/PageWrapper";
+import ContributorAvatar from "@/components/team/ContributorAvatar";
+import CoreTeamOrbit from "@/components/team/CoreTeamOrbit";
+
 
 export default function About() {
   const [activeCard, setActiveCard] = useState<string | null>(null);

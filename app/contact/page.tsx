@@ -1,9 +1,10 @@
 "use client";
 
-import PageWrapper from "@/components/layout/PageWrapper";
-import Button from "@/components/ui/Button";
+
 import { socialLinks } from "@/data/socials";
 import { contactMethods } from "@/data/contact";
+import Button from "@/components/common/Button";
+import PageWrapper from "@/components/effects/PageWrapper";
 
 export default function Contact() {
   return (
