@@ -1,4 +1,5 @@
 'use client';
+import PageWrapper from "@/components/layout/PageWrapper";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 export default function VarchasvaPage() {
@@ -38,8 +39,8 @@ export default function VarchasvaPage() {
     },
   ];
   return (
-
-    <div className="relative">
+    <PageWrapper>
+      <div className="relative">
 
       {/* Hero Glow */}
       <div className="absolute left-1/2 top-20 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-3xl" />
@@ -441,6 +442,7 @@ export default function VarchasvaPage() {
 
       </section>
     </div>
+    </PageWrapper>
   );
 }
 

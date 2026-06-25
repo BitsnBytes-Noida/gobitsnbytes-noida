@@ -16,6 +16,15 @@ export default function ClientLayout({
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const hasVisited = sessionStorage.getItem("loaderShown");
+
+    if (hasVisited) {
+      setLoading(false);
+      return;
+    }
+
+    sessionStorage.setItem("loaderShown", "true");
+
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2200);
