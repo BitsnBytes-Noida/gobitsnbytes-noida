@@ -4,7 +4,7 @@ export const upcomingEvents = [
     title: "Varchasva",
     date: "Coming Soon",
     description: "A city-wide ideathon where innovation meets execution.",
-    image: "/events/varchasva/poster.png",
+    image: "/events/varchasva/banner.jpg",
     href: "/events/varchasva",
   },
 ];

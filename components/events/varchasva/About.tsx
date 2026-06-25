@@ -23,7 +23,7 @@ export default function About() {
             "
           >
             <img
-              src="/events/varchasva/poster.png"
+              src="/events/varchasva/poster.jpg"
               alt="Varchasva Poster"
               className="w-full rounded-[20px]"
             />
