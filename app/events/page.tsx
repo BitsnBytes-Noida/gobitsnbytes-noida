@@ -1,5 +1,6 @@
-import EventCard from "@/components/cards/EventsCard";
-import PageWrapper from "@/components/layout/PageWrapper";
+
+import PageWrapper from "@/components/effects/PageWrapper";
+import EventCard from "@/components/events/EventsCard";
 import {
   upcomingEvents,
   pastEvents,
