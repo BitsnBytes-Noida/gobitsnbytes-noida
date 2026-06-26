@@ -1,12 +1,68 @@
 "use client";
 
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { toast } from "sonner";
 
 import { socialLinks } from "@/data/socials";
 import { contactMethods } from "@/data/contact";
 import Button from "@/components/common/Button";
 import PageWrapper from "@/components/effects/PageWrapper";
 
+const contactSchema = z.object({
+  name: z.string().min(2, "Name is required"),
+  email: z.string().email("Enter a valid email"),
+  subject: z.string().min(3, "Subject is required"),
+  message: z.string().min(10, "Message is too short"),
+});
+
+type ContactForm = z.infer<typeof contactSchema>;
 export default function Contact() {
+
+  const [loading, setLoading] = useState(false);
+
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<ContactForm>({
+    resolver: zodResolver(contactSchema),
+  });
+  const onSubmit = async (data: ContactForm) => {
+    try {
+      setLoading(true);
+
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+
+      if (!res.ok) {
+        throw new Error(result.message);
+      }
+
+      toast.success("Message sent successfully!");
+
+      reset();
+    } catch (err) {
+      toast.error(
+        err instanceof Error
+          ? err.message
+          : "Something went wrong."
+      );
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <PageWrapper>
       <main className="relative bg-linear-to-b from-[#020617]/80
@@ -117,7 +173,10 @@ to-[#020617]/80 z-10 min-h-screen px-6 py-20 md:py-24">
                 </p>
               </div>
 
-              <form className="mt-12 space-y-6">
+              <form
+                onSubmit={handleSubmit(onSubmit)}
+                className="mt-12 space-y-6"
+              >
 
                 <div>
                   <label className="mb-2 block text-sm text-zinc-400">
@@ -125,24 +184,31 @@ to-[#020617]/80 z-10 min-h-screen px-6 py-20 md:py-24">
                   </label>
 
                   <input
+                    {...register("name")}
                     type="text"
                     placeholder="Your name"
                     className="
-            w-full
-            rounded-2xl
-            border
-            border-cyan-500/20
-            bg-[#081225]/40
-            px-5
-            py-4
-            text-white
-            outline-none
-            transition-all
-            duration-300
-            focus:border-cyan-400
-            focus:shadow-[0_0_20px_rgba(34,211,238,0.15)]
-          "
+    w-full
+    rounded-2xl
+    border
+    border-cyan-500/20
+    bg-[#081225]/40
+    px-5
+    py-4
+    text-white
+    outline-none
+    transition-all
+    duration-300
+    focus:border-cyan-400
+    focus:shadow-[0_0_20px_rgba(34,211,238,0.15)]
+  "
                   />
+
+                  {errors.name && (
+                    <p className="mt-2 text-sm text-red-400">
+                      {errors.name.message}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -151,24 +217,31 @@ to-[#020617]/80 z-10 min-h-screen px-6 py-20 md:py-24">
                   </label>
 
                   <input
+                    {...register("email")}
                     type="email"
                     placeholder="you@example.com"
                     className="
-            w-full
-            rounded-2xl
-            border
-            border-cyan-500/20
-            bg-[#081225]/40
-            px-5
-            py-4
-            text-white
-            outline-none
-            transition-all
-            duration-300
-            focus:border-cyan-400
-            focus:shadow-[0_0_20px_rgba(34,211,238,0.15)]
-          "
+    w-full
+    rounded-2xl
+    border
+    border-cyan-500/20
+    bg-[#081225]/40
+    px-5
+    py-4
+    text-white
+    outline-none
+    transition-all
+    duration-300
+    focus:border-cyan-400
+    focus:shadow-[0_0_20px_rgba(34,211,238,0.15)]
+  "
                   />
+
+                  {errors.email && (
+                    <p className="mt-2 text-sm text-red-400">
+                      {errors.email.message}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -177,24 +250,31 @@ to-[#020617]/80 z-10 min-h-screen px-6 py-20 md:py-24">
                   </label>
 
                   <input
+                    {...register("subject")}
                     type="text"
                     placeholder="What's this about?"
                     className="
-            w-full
-            rounded-2xl
-            border
-            border-cyan-500/20
-            bg-[#081225]/40
-            px-5
-            py-4
-            text-white
-            outline-none
-            transition-all
-            duration-300
-            focus:border-cyan-400
-            focus:shadow-[0_0_20px_rgba(34,211,238,0.15)]
-          "
+    w-full
+    rounded-2xl
+    border
+    border-cyan-500/20
+    bg-[#081225]/40
+    px-5
+    py-4
+    text-white
+    outline-none
+    transition-all
+    duration-300
+    focus:border-cyan-400
+    focus:shadow-[0_0_20px_rgba(34,211,238,0.15)]
+  "
                   />
+
+                  {errors.subject && (
+                    <p className="mt-2 text-sm text-red-400">
+                      {errors.subject.message}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -203,44 +283,54 @@ to-[#020617]/80 z-10 min-h-screen px-6 py-20 md:py-24">
                   </label>
 
                   <textarea
+                    {...register("message")}
                     rows={6}
                     placeholder="Tell us about your idea..."
                     className="
-            w-full
-            resize-none
-            rounded-2xl
-            border
-            border-cyan-500/20
-            bg-[#081225]/40
-            px-5
-            py-4
-            text-white
-            outline-none
-            transition-all
-            duration-300
-            focus:border-cyan-400
-            focus:shadow-[0_0_20px_rgba(34,211,238,0.15)]
-          "
+    w-full
+    resize-none
+    rounded-2xl
+    border
+    border-cyan-500/20
+    bg-[#081225]/40
+    px-5
+    py-4
+    text-white
+    outline-none
+    transition-all
+    duration-300
+    focus:border-cyan-400
+    focus:shadow-[0_0_20px_rgba(34,211,238,0.15)]
+  "
                   />
+
+                  {errors.message && (
+                    <p className="mt-2 text-sm text-red-400">
+                      {errors.message.message}
+                    </p>
+                  )}
                 </div>
 
                 <button
                   type="submit"
+                  disabled={loading}
                   className="
-          w-full
-          rounded-2xl
-          bg-cyan-500
-          px-6
-          py-4
-          font-semibold
-          text-black
-          transition-all
-          duration-300
-          hover:scale-[1.02]
-          hover:shadow-[0_0_30px_rgba(34,211,238,0.35)]
-        "
+    w-full
+    rounded-2xl
+    bg-cyan-500
+    px-6
+    py-4
+    font-semibold
+    text-black
+    transition-all
+    duration-300
+    hover:scale-[1.02]
+    hover:shadow-[0_0_30px_rgba(34,211,238,0.35)]
+    disabled:cursor-not-allowed
+    disabled:opacity-60
+  "
                 >
-                  Send Message →
+                  {loading ? "Sending..." : "Send Message →"}
                 </button>
 
               </form>
