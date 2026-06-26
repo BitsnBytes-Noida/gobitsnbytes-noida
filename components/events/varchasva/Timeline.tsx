@@ -1,4 +1,13 @@
 import TimelineItem from "../TimelineItem";
+import {
+  UserPlus,
+  Users,
+  Lightbulb,
+  FileText,
+  Presentation,
+  Trophy,
+  Icon,
+} from "lucide-react";
 
 export default function Timeline() {
   return (
@@ -13,17 +22,38 @@ export default function Timeline() {
           Timeline
         </h2>
 
-        <div className="space-y-8">
+        <div className="mt-12">
+          
+          <TimelineItem
+            icon={UserPlus}
+            title="Registrations Open"
+          />
 
-          <TimelineItem title="Registrations Open" />
+          <TimelineItem
+            icon={Users}
+            title="Meet & Greet Session"
+          />
 
-          <TimelineItem title="Idea Submission" />
+          <TimelineItem
+            icon={Lightbulb}
+            title="Idea Preparation"
+          />
 
-          <TimelineItem title="Mentoring Round" />
+          <TimelineItem
+            icon={FileText}
+            title="Pitch Deck Submission"
+          />
 
-          <TimelineItem title="Final Presentation" />
+          <TimelineItem
+            icon={Presentation}
+            title="Final Presentation"
+          />
 
-          <TimelineItem title="Winner Announcement" />
+          <TimelineItem
+            icon={Trophy}
+            title="Winner Announcement"
+            isLast
+          />
 
         </div>
 

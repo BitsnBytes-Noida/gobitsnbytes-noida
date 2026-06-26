@@ -1,4 +1,12 @@
 import DetailCard from "../DetailCard";
+import {
+  Building2,
+  Users,
+  Ticket,
+  GraduationCap,
+  Shapes,
+  BadgeCheck,
+} from "lucide-react";
 
 export default function EventDetails() {
   return (
@@ -18,26 +26,44 @@ export default function EventDetails() {
           Varchasva.
         </p>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
           <DetailCard
-            title="Date"
-            value="Coming Soon"
+            icon={Building2}
+            title="Organizer"
+            value="Bits&Bytes Noida"
           />
 
           <DetailCard
-            title="Venue"
-            value="Coming Soon"
-          />
-
-          <DetailCard
+            icon={Users}
             title="Team Size"
-            value="Coming Soon"
+            value="2–4 Members"
           />
 
           <DetailCard
-            title="Prize Pool"
-            value="Coming Soon"
+            icon={Ticket}
+            title="Registration Fee"
+            value="Free"
           />
+
+          <DetailCard
+            icon={GraduationCap}
+            title="Eligibility"
+            value="School & College Students"
+          />
+
+          <DetailCard
+            icon={Shapes}
+            title="Tracks"
+            value="4 Official Tracks"
+          />
+
+          <DetailCard
+            icon={BadgeCheck}
+            title="Certificates"
+            value="Provided"
+          />
+
         </div>
 
       </div>
