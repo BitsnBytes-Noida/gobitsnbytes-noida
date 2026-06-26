@@ -55,6 +55,12 @@ export const contributors = [
       image: "/team/Contributors/prasiddhi.jpg",
       bio: "Helping create opportunities and experiences for builders.",
     },
+    {
+      name: "Daniel",
+      role: "Contributor",
+      image: "/team/Contributors/daniel.jpg",
+      bio: "Helping create opportunities and experiences for builders.",
+    },
   ];
 export const founders = [
     {
