@@ -1,5 +1,5 @@
-import { NextResponse } from "next/server";
-import { Resend } from "resend";
+import { NextRequest, NextResponse } from "next/server";
+
 const requests = new Map<
   string,
   {
@@ -7,6 +7,10 @@ const requests = new Map<
     firstRequest: number;
   }
 >();
+
+const MAX_REQUESTS = 5;
+const WINDOW_MS = 10 * 60 * 1000; // 10 minutes
+
 function escapeHtml(text: string) {
   return text
     .replace(/&/g, "&amp;")
@@ -16,17 +20,16 @@ function escapeHtml(text: string) {
     .replace(/'/g, "&#039;");
 }
 
-const MAX_REQUESTS = 5;
-const WINDOW_MS = 10 * 60 * 1000; // 10 minutes
-const resend = new Resend(process.env.RESEND_API_KEY);
-
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   try {
+    // --------------------------
+    // Rate Limiting
+    // --------------------------
+
     const forwardedFor = req.headers.get("x-forwarded-for");
     const ip = forwardedFor?.split(",")[0]?.trim() ?? "unknown";
 
     const now = Date.now();
-
     const existing = requests.get(ip);
 
     if (!existing) {
@@ -44,229 +47,121 @@ export async function POST(req: Request) {
         if (existing.count >= MAX_REQUESTS) {
           return NextResponse.json(
             {
-              message: "Too many requests. Please try again in 10 minutes.",
+              message:
+                "Too many requests. Please try again in 10 minutes.",
             },
             {
               status: 429,
-            },
+            }
           );
         }
 
         existing.count++;
       }
     }
-    const body = await req.json();
 
-    const { name, email, subject, message } = body;
+    // --------------------------
+    // Parse Body
+    // --------------------------
+
+    const { name, email, subject, message } = await req.json();
+
+    if (!name || !email || !subject || !message) {
+      return NextResponse.json(
+        {
+          message: "All fields are required.",
+        },
+        {
+          status: 400,
+        }
+      );
+    }
+
+    // --------------------------
+    // Sanitize
+    // --------------------------
+
     const safeName = escapeHtml(name);
     const safeEmail = escapeHtml(email);
     const safeSubject = escapeHtml(subject);
     const safeMessage = escapeHtml(message);
 
-    if (!name || !email || !subject || !message) {
-      return NextResponse.json(
-        { message: "All fields are required." },
-        { status: 400 },
-      );
-    }
+    // --------------------------
+    // Discord Webhook
+    // --------------------------
 
-    const { error } = await resend.emails.send({
-      from: "Bits&Bytes Website <onboarding@resend.dev>",
-      to: process.env.CONTACT_EMAIL!,
-      subject: `[Contact Form] ${subject}`,
-      replyTo: email,
+    const discordResponse = await fetch(
+      process.env.DISCORD_WEBHOOK_URL!,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username: "Bits&Bytes Noida Contact Form Inputs",
+          avatar_url: "https://noida.gobitsnbytes.org/logo.png",
 
-      html: `
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8" />
-</head>
+          embeds: [
+            {
+              title: "📨 New Contact Form Submission",
 
-<body style="margin:0;padding:0;background:#0f172a;font-family:Arial,sans-serif;">
+              description:
+                "A new message has been submitted through the website.",
 
-<table width="100%" cellpadding="0" cellspacing="0">
-<tr>
-<td align="center" style="padding:40px 20px;">
+              color: 0x06b6d4,
 
-<table
-  width="650"
-  cellpadding="0"
-  cellspacing="0"
-  style="
-    background:#081225;
-    border:1px solid #164e63;
-    border-radius:18px;
-    overflow:hidden;
-  "
->
+              fields: [
+                {
+                  name: "👤 Name",
+                  value: safeName,
+                  inline: true,
+                },
+                {
+                  name: "📧 Email",
+                  value: safeEmail,
+                  inline: true,
+                },
+                {
+                  name: "📝 Subject",
+                  value: safeSubject,
+                  inline: false,
+                },
+                {
+                  name: "💬 Message",
+                  value: safeMessage,
+                  inline: false,
+                },
+              ],
 
-<tr>
-<td
-  align="center"
-  style="
-    padding:35px;
-    background:linear-gradient(135deg,#2563eb,#06b6d4);
-  "
->
+              footer: {
+                text: "Bits&Bytes Noida Website",
+              },
 
-<h1
-  style="
-    margin:0;
-    color:white;
-    font-size:34px;
-  "
->
-Bits&Bytes Noida
-</h1>
+              timestamp: new Date().toISOString(),
+            },
+          ],
+        }),
+      }
+    );
 
-<p
-  style="
-    color:#dbeafe;
-    margin-top:10px;
-    font-size:16px;
-  "
->
-New Contact Form Submission
-</p>
-
-</td>
-</tr>
-
-<tr>
-<td style="padding:35px;">
-
-<table width="100%" cellpadding="12">
-
-<tr>
-<td
-  style="
-    color:#67e8f9;
-    font-weight:bold;
-    width:120px;
-  "
->
-Name
-</td>
-
-<td style="color:white;">
-${safeName}
-</td>
-</tr>
-
-<tr>
-<td
-  style="
-    color:#67e8f9;
-    font-weight:bold;
-  "
->
-Email
-</td>
-
-<td style="color:white;">
-${safeEmail}
-</td>
-</tr>
-
-<tr>
-<td
-  style="
-    color:#67e8f9;
-    font-weight:bold;
-  "
->
-Subject
-</td>
-
-<td style="color:white;">
-${safeSubject}
-</td>
-</tr>
-
-</table>
-
-<div
-  style="
-    margin-top:30px;
-    padding:22px;
-    border-radius:12px;
-    background:#0f172a;
-    border:1px solid #164e63;
-  "
->
-
-<p
-  style="
-    color:#67e8f9;
-    font-weight:bold;
-    margin-top:0;
-  "
->
-Message
-</p>
-
-<p
-  style="
-    color:#e5e7eb;
-    line-height:1.8;
-    white-space:pre-line;
-  "
->
-${safeMessage}
-</p>
-
-</div>
-
-</td>
-</tr>
-
-<tr>
-<td
-  align="center"
-  style="
-    padding:25px;
-    color:#94a3b8;
-    font-size:13px;
-    border-top:1px solid #164e63;
-  "
->
-
-This email was generated automatically from the
-Bits&Bytes website contact form.
-
-</td>
-</tr>
-
-</table>
-
-</td>
-</tr>
-</table>
-
-</body>
-</html>
-`,
-    });
-
-    if (error) {
-      console.error(error);
-
-      return NextResponse.json(
-        { message: "Failed to send email." },
-        { status: 500 },
-      );
+    if (!discordResponse.ok) {
+      throw new Error("Failed to send Discord notification.");
     }
 
     return NextResponse.json({
-      message: "Email sent successfully.",
+      success: true,
+      message: "Message sent successfully!",
     });
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    console.error("Contact API Error:", error);
 
     return NextResponse.json(
-      { message: "Internal Server Error." },
-      { status: 500 },
+      {
+        message: "Failed to send message.",
+      },
+      {
+        status: 500,
+      }
     );
   }
 }

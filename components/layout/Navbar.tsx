@@ -42,7 +42,7 @@ export default function Navbar() {
           className="flex items-center gap-3 transition-transform duration-300 hover:scale-[1.02]"
         >
           <img
-            src="/logo.svg"
+            src="/logo.png"
             alt="Bits&Bytes Noida"
             className="h-8 w-8 rounded-full"
           />
