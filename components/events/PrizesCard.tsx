@@ -1,13 +1,20 @@
 interface PrizeCardProps {
-  title: string;
+  position: string;
+  prize: string;
+  title?: string;
+  color: string;
 }
 
 export default function PrizeCard({
-  title,
+  position,
+  prize,
+  title = "Prize",
+  color,
 }: PrizeCardProps) {
   return (
     <div
       className="
+        group
         rounded-2xl
         border
         border-cyan-500/20
@@ -16,17 +23,22 @@ export default function PrizeCard({
         text-center
         transition-all
         duration-300
+        hover:-translate-y-2
         hover:border-cyan-400/40
-        hover:shadow-[0_0_30px_rgba(34,211,238,0.15)]
+        hover:shadow-[0_0_35px_rgba(34,211,238,0.15)]
       "
     >
-      <h3 className="text-2xl font-bold text-white">
-        {title}
-      </h3>
+      <div className={`text-5xl ${color}`}>
+        {position}
+      </div>
 
-      <p className="mt-3 text-zinc-400">
-        Coming Soon
+      <p className="mt-5 text-sm uppercase tracking-[0.2em] text-zinc-400">
+        {title}
       </p>
+
+      <h3 className="mt-3 text-4xl font-bold text-white">
+        {prize}
+      </h3>
     </div>
   );
 }
