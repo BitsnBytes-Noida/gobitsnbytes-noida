@@ -39,13 +39,13 @@ export default function ThemeCard({
         {description}
       </p>
 
-      <div className="mt-6 flex items-center gap-2 text-cyan-300">
+      {/* <div className="mt-6 flex items-center gap-2 text-cyan-300">
         <span className="text-sm font-medium">
           Explore Track
         </span>
 
         <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -1,3 +1,5 @@
+import Button from "@/components/common/Button";
+
 export default function Hero() {
   return (
     <section className="px-6 py-28 md:py-36">
@@ -15,13 +17,20 @@ export default function Hero() {
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <button className="rounded-xl bg-cyan-400 px-6 py-3 font-semibold text-black transition hover:scale-105">
-            Register Now
-          </button>
+          <Button
+            href="https://builderbase.com/v2/event/varchasva/register"
+            external
+          >
+            Register Now →
+          </Button>
 
-          <button className="rounded-xl border border-cyan-500/20 px-6 py-3 text-white transition hover:border-cyan-400">
-            Event Brochure
-          </button>
+          <Button
+            href="/events/varchasva/varchasva-brochure.pdf"
+            external
+            variant="secondary"
+          >
+            Download Brochure ↓
+          </Button>
         </div>
 
         <div className="mt-16 flex justify-center">
