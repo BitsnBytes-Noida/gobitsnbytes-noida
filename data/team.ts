@@ -50,12 +50,6 @@ export const contributors = [
       bio: "Supporting community initiatives and builder programs.",
     },
     {
-      name: "Prasiddhi Sai",
-      role: "Contributor",
-      image: "/team/Contributors/prasiddhi.jpg",
-      bio: "Helping create opportunities and experiences for builders.",
-    },
-    {
       name: "Daniel",
       role: "Contributor",
       image: "/team/Contributors/daniel.jpg",
