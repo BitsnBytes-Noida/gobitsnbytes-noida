@@ -4,6 +4,7 @@ import EventCard from "@/components/events/EventsCard";
 import {
   upcomingEvents,
   pastEvents,
+  ongoingEvents,
 } from "@/data/events";
 
 export default function EventsPage() {
@@ -55,6 +56,40 @@ export default function EventsPage() {
                 community events hosted by Bits & Bytes Noida.
               </p>
             </div>
+            <section className="mt-24">
+              <div className="mb-8 flex items-center gap-4">
+                <div className="h-px flex-1 bg-cyan-500/20" />
+
+                <h2 className="text-3xl font-bold text-white">
+                  Ongoing Events
+                </h2>
+
+                <div className="h-px flex-1 bg-cyan-500/20" />
+              </div>
+
+              {ongoingEvents.length > 0 ? (
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                  {ongoingEvents.map((event) => (
+                    <EventCard
+                      key={event.id}
+                      {...event}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div className="flex min-h-[260px] flex-col items-center justify-center rounded-[24px] border border-dashed border-cyan-500/20 bg-[#081225]/30 text-center">
+                  <div className="text-5xl">🚀</div>
+
+                  <h3 className="mt-4 text-2xl font-semibold text-white">
+                    No Ongoing Events
+                  </h3>
+
+                  <p className="mt-3 max-w-md text-zinc-400">
+                    The next build session is loading...
+                  </p>
+                </div>
+              )}
+            </section>
 
             {/* Upcoming Events */}
             <section className="mt-24">
