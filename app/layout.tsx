@@ -5,6 +5,7 @@ import GridBackground from "@/components/effects/GridBackground";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ClientLayout from "@/components/layout/ClientLayout";
+import { Analytics } from "@vercel/analytics/next";
 export const metadata: Metadata = {
   title: "Bits&Bytes Noida",
   description:
@@ -23,6 +24,7 @@ export default function RootLayout({
         <ClientLayout>
           {children}
         </ClientLayout>
+        <Analytics />
       </body>
     </html>
   );
