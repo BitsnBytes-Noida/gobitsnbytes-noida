@@ -55,24 +55,24 @@ export const contributors = [
       image: "/team/Contributors/daniel.jpg",
       bio: "Helping create opportunities and experiences for builders.",
     },
-    {
-      name: "Divesh Chandra",
-      role: "Contributor",
-      image: "/team/Contributors/divesh.jpg",
-      bio: "Helping create opportunities and experiences for builders.",
-    },
+    // {
+    //   name: "Divesh Chandra",
+    //   role: "Contributor",
+    //   image: "/team/Contributors/divesh.jpg",
+    //   bio: "Helping create opportunities and experiences for builders.",
+    // },
     {
       name: "Akshita Singh",
       role: "Contributor",
       image: "/team/Contributors/akshita.jpg",
       bio: "Helping create opportunities and experiences for builders.",
     },
-    {
-      name: "Palak Rai",
-      role: "Contributor",
-      image: "/team/Contributors/palak.jpg",
-      bio: "Helping create opportunities and experiences for builders.",
-    },
+    // {
+    //   name: "Palak Rai",
+    //   role: "Contributor",
+    //   image: "/team/Contributors/palak.jpg",
+    //   bio: "Helping create opportunities and experiences for builders.",
+    // },
   ];
 export const founders = [
     {
