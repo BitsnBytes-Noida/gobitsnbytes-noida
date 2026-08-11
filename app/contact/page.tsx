@@ -71,14 +71,14 @@ to-[#020617]/80 z-10 min-h-screen px-6 py-20 md:py-24">
         <div className="mx-auto max-w-6xl">
           {/* Hero */}
           <section className="text-center">
-            <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">
+            <p className="eyebrow text-sm uppercase tracking-[0.3em]">
               CONTACT
             </p>
 
             <h1 className="mt-6 text-5xl font-bold uppercase leading-[0.9] text-white md:text-7xl">
               GET IN
               <br />
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+              <span className="accent-text">
                 TOUCH.
               </span>
             </h1>
@@ -140,7 +140,7 @@ to-[#020617]/80 z-10 min-h-screen px-6 py-20 md:py-24">
               <h2 className="text-4xl font-bold uppercase text-white md:text-6xl">
                 DON'T BUILD
                 <br />
-                <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+                <span className="accent-text">
                   ALONE.
                 </span>
               </h2>
@@ -341,4 +341,3 @@ to-[#020617]/80 z-10 min-h-screen px-6 py-20 md:py-24">
     </PageWrapper>
   );
 }
-

@@ -39,7 +39,7 @@ export default function EventsPage() {
 
             {/* Hero */}
             <div className="text-center">
-              <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">
+              <p className="eyebrow text-sm uppercase tracking-[0.3em]">
                 EVENTS
               </p>
 
@@ -53,7 +53,7 @@ export default function EventsPage() {
 
               <p className="mx-auto mt-6 max-w-2xl text-zinc-400">
                 Discover workshops, hackathons, meetups, and
-                community events hosted by Bits & Bytes Noida.
+                community events hosted by Bits&amp;Bytes Noida.
               </p>
             </div>
             <section className="mt-24">
@@ -78,7 +78,7 @@ export default function EventsPage() {
                 </div>
               ) : (
                 <div className="flex min-h-[260px] flex-col items-center justify-center rounded-[24px] border border-dashed border-cyan-500/20 bg-[#081225]/30 text-center">
-                  <div className="text-5xl">🚀</div>
+                  <div aria-hidden="true" className="text-3xl text-orange-300">//</div>
 
                   <h3 className="mt-4 text-2xl font-semibold text-white">
                     No Ongoing Events
@@ -114,7 +114,7 @@ export default function EventsPage() {
                 </div>
               ) : (
                 <div className="flex min-h-[260px] flex-col items-center justify-center rounded-[24px] border border-dashed border-cyan-500/20 bg-[#081225]/30 text-center">
-                  <div className="text-5xl">🚀</div>
+                  <div aria-hidden="true" className="text-3xl text-orange-300">//</div>
 
                   <h3 className="mt-4 text-2xl font-semibold text-white">
                     No Upcoming Events
@@ -150,7 +150,7 @@ export default function EventsPage() {
                 </div>
               ) : (
                 <div className="flex min-h-[260px] flex-col items-center justify-center rounded-[24px] border border-dashed border-cyan-500/20 bg-[#081225]/30 text-center">
-                  <div className="text-5xl">📚</div>
+                  <div aria-hidden="true" className="text-3xl text-orange-300">//</div>
 
                   <h3 className="mt-4 text-2xl font-semibold text-white">
                     No Past Events
