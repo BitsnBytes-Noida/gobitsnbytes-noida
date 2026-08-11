@@ -70,7 +70,7 @@ const nextConfig = {
     return [
       {
         source: '/favicon.ico',
-        destination: '/logo.svg',
+        destination: '/logo.png',
         permanent: true,
       },
       {

@@ -17,7 +17,7 @@ export default function Footer() {
           </div>
 
           {/* Navigation */}
-          <div className="flex gap-12">
+          <div className="flex flex-wrap gap-x-12 gap-y-10">
             <div>
               <p className="mb-3 text-xs uppercase tracking-[0.2em] text-cyan-300">
                 Navigate
@@ -28,6 +28,26 @@ export default function Footer() {
                 <Link href="/about">About</Link>
                 <Link href="/contact">Contact</Link>
                 <Link href="/join">Join</Link>
+              </div>
+            </div>
+
+            <div>
+              <p className="mb-3 text-xs uppercase tracking-[0.2em] text-cyan-300">
+                Network
+              </p>
+              <div className="flex flex-col gap-2 text-sm text-zinc-400">
+                <a href="https://gobitsnbytes.org" target="_blank" rel="noreferrer">
+                  bits&amp;bytes™ parent network
+                </a>
+                <a href="https://gobitsnbytes.org/fork" target="_blank" rel="noreferrer">
+                  Fork network
+                </a>
+                <a href="https://gobitsnbytes.org/contact" target="_blank" rel="noreferrer">
+                  Parent network contact
+                </a>
+                <a href="https://github.com/gobitsnbytes" target="_blank" rel="noreferrer">
+                  Parent GitHub
+                </a>
               </div>
             </div>
 
@@ -52,6 +72,22 @@ export default function Footer() {
                 >
                   Instagram
                 </a>
+              </div>
+            </div>
+
+            <div className="max-w-[13rem]">
+              <p className="mb-3 text-xs uppercase tracking-[0.2em] text-cyan-300">
+                Trust Center
+              </p>
+              <p className="mb-4 text-xs leading-relaxed text-zinc-500">
+                The public rules for a teen-led network: safety, privacy, brand stewardship, and participation standards.
+              </p>
+              <div className="flex flex-col gap-3 text-sm text-zinc-400">
+                <a href="https://gobitsnbytes.org/terms" target="_blank" rel="noreferrer"><span className="text-zinc-200">Terms</span><span className="block text-xs text-zinc-500">Participation, Forks, money, and authority</span></a>
+                <a href="https://gobitsnbytes.org/privacy" target="_blank" rel="noreferrer"><span className="text-zinc-200">Privacy</span><span className="block text-xs text-zinc-500">Data handling, minors, and guardian requests</span></a>
+                <a href="https://gobitsnbytes.org/coc" target="_blank" rel="noreferrer"><span className="text-zinc-200">Code of Conduct</span><span className="block text-xs text-zinc-500">Safety, reporting, enforcement, and standards</span></a>
+                <a href="https://gobitsnbytes.org/ip" target="_blank" rel="noreferrer"><span className="text-zinc-200">IP Policy</span><span className="block text-xs text-zinc-500">Brand use, logos, open-source, and claims</span></a>
+                <a href="https://gobitsnbytes.org/press" target="_blank" rel="noreferrer"><span className="text-zinc-200">Press Kit</span><span className="block text-xs text-zinc-500">Official logos, facts, colors, and media contact</span></a>
               </div>
             </div>
           </div>
