@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Bits&Bytes Noida | Team",
   description:
-    "Bits&Bytes Noida is a city fork of Bits&Bytes. Meet the team behind the Noida fork.",
+    "Bits&Bytes Noida is the teen-led Noida operational unit of the bits&bytes™ network. Meet the local team.",
   keywords: [
     "Bits&Bytes Noida",
     "teen developers noida",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "About Bits&Bytes Noida",
-    description: "Meet the team behind the Noida fork of Bits&Bytes.",
+    description: "Meet the team running the Noida operational unit of the bits&bytes™ network.",
     url: "https://noida.gobitsnbytes.org/about",
     type: "website",
   },

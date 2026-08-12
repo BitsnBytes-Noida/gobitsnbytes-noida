@@ -185,6 +185,53 @@
 }
 
 @layer components {
+  .eyebrow {
+    color: var(--bb-orange-80);
+  }
+
+  .accent-text {
+    color: var(--bb-orange-60);
+  }
+
+  .display-title {
+    letter-spacing: -0.055em;
+  }
+
+  .founder-card {
+    transition-property: border-color, background-color, transform, box-shadow;
+    transition-duration: 180ms;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .founder-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(228, 90, 146, 0.3);
+    background-color: rgba(12, 8, 21, 0.7);
+    box-shadow: 0 16px 40px rgba(17, 8, 31, 0.24);
+  }
+
+  a,
+  button,
+  input,
+  textarea {
+    transition-property: color, background-color, border-color, box-shadow, opacity, transform;
+    transition-duration: 180ms;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--bb-orange-60);
+    outline-offset: 4px;
+  }
+
+  button:active,
+  a[role="button"]:active {
+    transform: scale(0.98);
+  }
+
   .app-shell {
     @apply relative mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-12 sm:px-6 lg:px-8;
   }
@@ -580,4 +627,15 @@ html {
     rgba(34, 211, 238, 0.15),
     transparent 45%
   );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }

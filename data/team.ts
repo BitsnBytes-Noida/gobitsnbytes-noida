@@ -77,17 +77,17 @@ export const contributors = [
 export const founders = [
     {
       name: "Yash Singh",
-      role: "Co-Founder & Organisation Lead",
+      role: "Chief Executive Officer (CEO)",
       image: "/team/Founders/yash.jpeg",
     },
     {
       name: "Aadrika Maurya",
-      role: "Co-Founder & Chief Creative Strategist",
+      role: "Chief Creative Officer (CCO) & Chief Operating Officer (COO)",
       image: "/team/Founders/aadrika.png",
     },
     {
       name: "Akshat Kushwaha",
-      role: "Co-Founder & Technical Lead",
+      role: "Chief Technology Officer (CTO)",
       image: "/team/Founders/akshat.jpg",
     },
   ];
